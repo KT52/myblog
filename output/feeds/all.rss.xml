@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>gaeblog</title><link>/</link><description></description><lastBuildDate>Mon, 02 Apr 2018 12:00:00 +0900</lastBuildDate><item><title>Google App EngineでPelicanを使ってブログをホスティングする</title><link>/2018/04/pelicangae/index.html</link><description>&lt;h2&gt;PelicanをGAEで使う&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;
+Google App Engine（以下GAE）は静的サイトもホスティングできるので、Pythonの静的サイトジェネレーターPelicanを使ったブログサイトを作ってみた。&lt;br&gt;
+なお、GAEの利用法（Google Cloud SDKとか)とPelicanの使い方については省きます。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;GAEの新しいプロジェクトを作成する。&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;ここではプロジェクト名を"myblog"とする。&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;プロジェクトのディレクトリにひな型を作成。&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;
+プロジェクト"myblog"のローカルディレクトリにpelicanの&lt;code&gt;pelican-quickstart&lt;/code&gt;コマンドでひな型を作成。ディレクトリはこんな構造になっている。  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;myblog/
+    content/
+    output/
+    app.yaml
+    pelicanconf.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;他にもファイルがプロジェクトのディレクトリにありますが、ブログ作成に最低限必要なのはこれだけ。&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;app.yamlの設定&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;runtime&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;python27&lt;/span&gt;
+&lt;span class="n"&gt;api_version&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="n"&gt;threadsafe&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;yes&lt;/span&gt;
+
+&lt;span class="n"&gt;handlers&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;
+  &lt;span class="n"&gt;static_files&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;html&lt;/span&gt;
+  &lt;span class="n"&gt;upload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;index …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kt</dc:creator><pubDate>Mon, 02 Apr 2018 12:00:00 +0900</pubDate><guid isPermaLink="false">tag:None,2018-04-02:/2018/04/pelicangae/index.html</guid><category>Python</category><category>GAE</category><category>Pelican</category></item><item><title>Pythonの静的サイトジェネレーターPelicanでGitHubにブログを開設する</title><link>/2018/03/pelicangithub/index.html</link><description>&lt;p&gt;&lt;br&gt;&lt;br&gt;GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）に&lt;a href="http://docs.getpelican.com/en/stable/"&gt;Pelican&lt;/a&gt;を使ってブログ作る方法というのを知って実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;GitHubに登録&lt;/h3&gt;
+&lt;p&gt;Gitが使えるという前提で進めていきます。&lt;br&gt;
+まずは&lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;でアカウントを作成。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;レポジトリを作成&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Repository name&lt;/code&gt;に&lt;code&gt;ユーザーネーム.github.io&lt;/code&gt;と打ち込んで&lt;code&gt;`Create Repository&lt;/code&gt;をクリックして新規作成。&lt;br&gt;
+Initialize this repository with a README`にチェックを入れるとREADME.mdが作られる。 &lt;br&gt;&lt;br&gt; &lt;/p&gt;
+&lt;h3&gt;ローカルに環境を構築&lt;/h3&gt;
+&lt;p&gt;ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。&lt;br&gt;
+Markdown形式で書く場合はMarkdownもインストール。&lt;br&gt;
+&lt;code&gt;pip install pelican&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;pip install Markdown&lt;/code&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;pelican-quickstartでブログのひな型を作成&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;とコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kt</dc:creator><pubDate>Fri, 30 Mar 2018 12:00:00 +0900</pubDate><guid isPermaLink="false">tag:None,2018-03-30:/2018/03/pelicangithub/index.html</guid><category>Python</category><category>GitHub</category><category>Pelican</category></item><item><title>Test</title><link>/2018/03/2018-03-27/index.html</link><description>&lt;h1&gt;Test&lt;/h1&gt;
+&lt;p&gt;日本語はちゃんと表示されるかな？&lt;br&gt;
+&lt;img width="400" src="../../../images/test.jpg" alt=""&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">kt</dc:creator><pubDate>Tue, 27 Mar 2018 14:00:00 +0900</pubDate><guid isPermaLink="false">tag:None,2018-03-27:/2018/03/2018-03-27/index.html</guid></item></channel></rss>
