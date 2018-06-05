@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'kt'
 SITENAME = u'gaeblog'
-SITEURL = 'https://cocky-sammet-c8637c.netlify.com/'
+SITEURL = ''
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 ABOUT_ME = u'Python beginner'
 AVATAR = 'images/profile.png'
@@ -61,6 +61,7 @@ PLUGINS = ['i18n_subsites', "tag_cloud"]
 
 # Social widget
 SOCIAL = (('tumblr', 'https://www.tumblr.com/blog/lollapal00za'),
+          ('github', 'https: // github.com/Squigly77/myblog')
           )
 
 DEFAULT_PAGINATION = 5
