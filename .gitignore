@@ -1,1 +1,6 @@
 "/output"
+"/Lib"
+"/Scripts"
+fabfile.py
+get-pip.py
+pyvenv.cfg

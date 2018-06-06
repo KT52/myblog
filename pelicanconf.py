@@ -61,7 +61,7 @@ PLUGINS = ['i18n_subsites', "tag_cloud"]
 
 # Social widget
 SOCIAL = (('tumblr', 'https://www.tumblr.com/blog/lollapal00za'),
-          ('github', 'https: // github.com/Squigly77/myblog')
+          ('github', 'https://github.com/Squigly77/myblog')
           )
 
 DEFAULT_PAGINATION = 5
