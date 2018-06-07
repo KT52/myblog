@@ -19,7 +19,7 @@ PATH = 'content'
 OUTPUT_PATH = 'output'
 USE_FOLDER_AS_CATEGORY = True
 
-ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/index.html' #index.html記入しないとダメっぽい
+ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/' #gaeの場合index.html記入しないとダメっぽい
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/index.html'
 YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
@@ -71,7 +71,7 @@ RELATIVE_URLS = True
 
 # Theme path
 THEME = './themes/pelican-bootstrap3'
-BOOTSTRAP_THEME = 'yeti'
+BOOTSTRAP_THEME = 'flatly'
 
 #static files path
 STATIC_PATHS = ['images','static']

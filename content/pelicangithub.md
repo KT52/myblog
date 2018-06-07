@@ -4,7 +4,7 @@ Category:	Pelican
 Tags: Python,GitHub,Pelican
 Slug:　pelicangithub
 
-<br><br>GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）に[Pelican](http://docs.getpelican.com/en/stable/)を使ってブログ作る方法というのを知って実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。<br><br>
+今更ながら静的サイトジェネレーターというものの存在を知って、GitHub Pagesに[Pelican](http://docs.getpelican.com/en/stable/)を使ってブログ作ったサイトなどを参考にして実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。<br><br>
 
 ### GitHubに登録
 Gitが使えるという前提で進めていきます。  
@@ -18,10 +18,11 @@ Gitが使えるという前提で進めていきます。
 
 ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。  
 Markdown形式で書く場合はMarkdownもインストール。  
-`pip install pelican`  
-`pip install Markdown`<br><br>
+`pip install pelican Markdown`  
+<br><br>
 
 ###  pelican-quickstartでブログのひな型を作成
+
 `pelican-quickstart`とコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる。  
 ```
 This script will help you create a new Pelican-based website.
@@ -100,6 +101,7 @@ themesディレクトリを作ってそこにダウンロードしたテーマ�
 入ってたら`pelicanconf.py`にTHEME = 'テーマ名'を追加する。<br><br>
 
 ### GitHub PagesにPush
+
 pipでghp-importを入れておくと、GitHub pagesへの公開が楽に行える。  
 入れたらGitHubにアップロード  
 `ghp-import output`  
