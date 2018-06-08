@@ -1,4 +1,4 @@
-Title: Google App EngineでPelicanを使ってブログをホスティングする
+Title: Google App EngineでPelicanを使ってブログをホスティングする方法
 Date: 2018-04-02 12:00
 Category:	Pelican
 Tags: Python,GAE,Pelican

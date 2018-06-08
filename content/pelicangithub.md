@@ -4,7 +4,7 @@ Category:	Pelican
 Tags: Python,GitHub,Pelican
 Slug:　pelicangithub
 
-今更ながら静的サイトジェネレーターというものの存在を知って、GitHub Pagesに[Pelican](http://docs.getpelican.com/en/stable/)を使ってブログ作ったサイトなどを参考にして実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。<br><br>
+今更ながら静的サイトジェネレーターというものの存在を知って、GitHub Pagesに[Pelican](http://docs.getpelican.com/en/stable/)を使ってブログを実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。<br><br>
 
 ### GitHubに登録
 Gitが使えるという前提で進めていきます。  

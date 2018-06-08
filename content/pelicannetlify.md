@@ -1,22 +1,30 @@
-Title: Netlifyに静的コンテンツをホスティングする
+Title: NetlifyにPelicanを使用して静的コンテンツをホスティングする
 Date: 2018-06-07
 Category: Pelican
 Tags: Netlify,Python,Pelican
 Slug:　pelicannetlify
 
+![Netlify](../../../images/netlify.com.jpg)
+
 ## Netlifyとは？
+
 Netlifyとは静的コンテンツベースのウェブサイトに特化したWEBホスティングサービスです。  PelicanやHexoなどの静的サイトジェネレーターでウェブサイトを公開するのに便利なサービスです。他にはGitHub Pagesなどがありますね。  
 GitHubやGitLabと連携してリポジトリからデプロイしたり、連携しなくてもhtmlファイルなどが入ったフォルダをzipで固めて直接ドラッグアンドドロップでアップロードするだけでサイトを公開できます。  
 
 ## Netlifyの特長
+
 - ビルドコマンドが実行可能  
 静的サイトジェネレーターでhtmlをジェネレイトするのをNetlifyが勝手にやってくれるので、記事を書いてpushするだけでい
 い。
+
 - http/2
 - 独自ドメインが使用可能
+
 - 無料のssl/https
+
 - CDN  
-cloudflareなどのサービスを使わずにサイトを高速化することができる。
+cloudflareなどのサービスを使わずにキャッシュして高速化することができる。
+
 - フォームの設置
 
 他にもいろいろな機能があります。詳しくは→[Docs](https://www.netlify.com/docs/)参照。  
@@ -49,4 +57,50 @@ Freeプランでどれくらい利用できるのかというと、
 ## コンソール画面
 
 `Deploy site`をクリックしたらこんな風にコンソール画面が表示されます。"happy-hugle-5cae8e.netlify.com"というURLが割り当てられました。  
-<a href="../../../images/netlify_overview2.jpg" data-toggle="lightbox" data-max-width="100%"><img src="../../../images/netlify_overview2.jpg"  class="img-thumbnail" alt="overview" width="300" ></a>  
+<a href="../../../images/netlify_overview.jpg" data-toggle="lightbox" data-max-width="100%"><img src="../../../images/netlify_overview.jpg"  class="img-thumbnail" alt="overview" width="300" ></a> 
+
+## GitHubにpushする前にすること、  
+
+Pelicanの使用法は[コチラ]() に書いたので省略。
+
+- .gitignoreファイルを作成してoutputディレクトリをgitの管理から除外する。  
+
+```
+echo "/output" >> .gitignore
+```
+
+- 使用しているライブラリの一覧を`requirements.txt`に書き出す。
+
+```
+pip freeze > requirements.txt
+```
+このrequirements.txtを元にNetlifyがライブラリを勝手に読み込んでくれる。
+
+- pythonのヴァージョンを`runtime.txt`に記述。  
+デフォルトでは2.7を使用しているので違うヴァージョンを使用している場合は使用するヴァージョンを`runtime.txt`を作って記述する。
+
+```.txt
+
+3.6
+
+```
+
+## GitHubにpush
+
+```
+git init
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/ユーザー名/リポジトリ.git
+git remote -v
+git push origin master
+```
+
+全部GitHubにあげてみたけど、仮想環境（venv）のlibディレクトリとかScripitsディレクトリとか要らなくね？
+ってことで、.ignoreに"/Lib"、"/Scripts"を追記した。  
+  
+pelicanのテーマとプラグインを導入している場合はそのディレクトリもGitHubにpushすること。
+
+## Netlifyにデプロイ
+
+NetlifyのコンソールページからDeploys→Deploy settingsに進んで、Build commandに`pelican content`、Publish directoryに`/output`を記入してsave。GitHubにpushしているとNetlifyが自動でデプロイしてくれる。
