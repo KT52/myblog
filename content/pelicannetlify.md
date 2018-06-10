@@ -8,12 +8,13 @@ Slug:　pelicannetlify
 
 ## Netlifyとは？
 
-Netlifyとは静的コンテンツベースのウェブサイトに特化したWEBホスティングサービスです。  PelicanやHexoなどの静的サイトジェネレーターでウェブサイトを公開するのに便利なサービスです。他にはGitHub Pagesなどがありますね。  
+[Netlify](https://www.netlify.com/)とは静的コンテンツベースのウェブサイトに特化したWEBホスティングサービスです。  PelicanやHexoなどの静的サイトジェネレーターでウェブサイトを公開するのに便利なサービスです。他にはGitHub Pagesなどがありますね。  
 GitHubやGitLabと連携してリポジトリからデプロイしたり、連携しなくてもhtmlファイルなどが入ったフォルダをzipで固めて直接ドラッグアンドドロップでアップロードするだけでサイトを公開できます。  
 
 ## Netlifyの特長
 
 - ビルドコマンドが実行可能  
+
 静的サイトジェネレーターでhtmlをジェネレイトするのをNetlifyが勝手にやってくれるので、記事を書いてpushするだけでい
 い。
 
@@ -23,6 +24,7 @@ GitHubやGitLabと連携してリポジトリからデプロイしたり、連�
 - 無料のssl/https
 
 - CDN  
+
 cloudflareなどのサービスを使わずにキャッシュして高速化することができる。
 
 - フォームの設置
@@ -38,8 +40,6 @@ Freeプランでどれくらい利用できるのかというと、
 - ネットワーク転送量 100GB/月
 - ストレージ100GB
 - APIリクエスト500リクエスト/分, 3デプロイ/分  
-
-ストレージ100GBなんてほぼ制限がないと言っているようなもの。
 
 ## サインイン
 
@@ -59,7 +59,7 @@ Freeプランでどれくらい利用できるのかというと、
 `Deploy site`をクリックしたらこんな風にコンソール画面が表示されます。"happy-hugle-5cae8e.netlify.com"というURLが割り当てられました。  
 <a href="../../../images/netlify_overview.jpg" data-toggle="lightbox" data-max-width="100%"><img src="../../../images/netlify_overview.jpg"  class="img-thumbnail" alt="overview" width="300" ></a> 
 
-## GitHubにpushする前にすること、  
+## GitHubにpushする前にすること  
 
 Pelicanの使用法は[コチラ]() に書いたので省略。
 
@@ -77,11 +77,12 @@ pip freeze > requirements.txt
 このrequirements.txtを元にNetlifyがライブラリを勝手に読み込んでくれる。
 
 - pythonのヴァージョンを`runtime.txt`に記述。  
+
 デフォルトでは2.7を使用しているので違うヴァージョンを使用している場合は使用するヴァージョンを`runtime.txt`を作って記述する。
 
 ```.txt
 
-3.6
+3.6.4
 
 ```
 
@@ -97,10 +98,14 @@ git push origin master
 ```
 
 全部GitHubにあげてみたけど、仮想環境（venv）のlibディレクトリとかScripitsディレクトリとか要らなくね？
-ってことで、.ignoreに"/Lib"、"/Scripts"を追記した。  
+ってことで、.gitignoreに"/Lib"、"/Scripts"を追記した。  
   
 pelicanのテーマとプラグインを導入している場合はそのディレクトリもGitHubにpushすること。
 
 ## Netlifyにデプロイ
 
-NetlifyのコンソールページからDeploys→Deploy settingsに進んで、Build commandに`pelican content`、Publish directoryに`/output`を記入してsave。GitHubにpushしているとNetlifyが自動でデプロイしてくれる。
+NetlifyのコンソールページからDeploys→Deploy settingsに進んで、Build commandに`pelican content`、Publish directoryに`/output`を記入してsave。  
+GitHubにpushしているとNetlifyが自動でデプロイしてくれる。
+
+logに何もエラーが表示されていなければ成功  
+<a href="../../../images/deploy.jpg" data-toggle="lightbox" data-max-width="100%"><img src="../../../images/deploy.jpg" width="200" alt="deploy" class="img-thumbnail"></a>  
