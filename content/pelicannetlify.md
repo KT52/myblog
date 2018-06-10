@@ -14,7 +14,6 @@ GitHubやGitLabと連携してリポジトリからデプロイしたり、連�
 ## Netlifyの特長
 
 - ビルドコマンドが実行可能  
-
 静的サイトジェネレーターでhtmlをジェネレイトするのをNetlifyが勝手にやってくれるので、記事を書いてpushするだけでい
 い。
 
@@ -24,7 +23,6 @@ GitHubやGitLabと連携してリポジトリからデプロイしたり、連�
 - 無料のssl/https
 
 - CDN  
-
 cloudflareなどのサービスを使わずにキャッシュして高速化することができる。
 
 - フォームの設置
@@ -73,11 +71,10 @@ echo "/output" >> .gitignore
 
 ```
 pip freeze > requirements.txt
-```
+```  
 このrequirements.txtを元にNetlifyがライブラリを勝手に読み込んでくれる。
 
 - pythonのヴァージョンを`runtime.txt`に記述。  
-
 デフォルトでは2.7を使用しているので違うヴァージョンを使用している場合は使用するヴァージョンを`runtime.txt`を作って記述する。
 
 ```.txt
