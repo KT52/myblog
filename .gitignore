@@ -1,6 +1,11 @@
 "/output"
-"/Lib"
-"/Scripts"
+Lib/
+Scripts/
+output/
+__pycache__/
 fabfile.py
 get-pip.py
 pyvenv.cfg
+develop_server.sh
+Makefile
+pip-selfcheck.json
