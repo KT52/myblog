@@ -1,4 +1,4 @@
-Title: Pythonの静的サイトジェネレーターPelicanでGitHubにブログを開設する
+Title: Pythonの静的サイトジェネレーターPelicanでGitHub Pagesにブログを開設する
 Date: 2018-03-30 12:00
 Category:	Pelican
 Tags: Python,GitHub,Pelican
@@ -19,7 +19,7 @@ Gitが使えるという前提で進めていきます。
 ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。  
 Markdown形式で書く場合はMarkdownもインストール。  
 `pip install pelican Markdown`  
-<br><br>
+<br>
 
 ###  pelican-quickstartでブログのひな型を作成
 
@@ -96,7 +96,7 @@ pelicanconf.pyに`STATIC_PATHS = ['images']`のように記述。
 
 デフォルトのテーマを変えたい場合、自作するか、[Pelican Themes](http://pelicanthemes.com/)からお気に入りのものをダウンロードして適用することも出来ます。
 themesディレクトリを作ってそこにダウンロードしたテーマを入れたら、`pelican-themes --i [テーマの入ったディレクトリ]`で導入することが出来ます。  
-僕はpelican-bootstrap3というテーマを選んだので、`pelican-themes --i themes/pelican-bootstrap3`で入れました。  
+僕は"pelican-bootstrap3"というテーマを選んだので、`pelican-themes --i themes/pelican-bootstrap3`で入れました。  
 ちゃんと入ったかを確認するには`pelican-themes -l`  
 入ってたら`pelicanconf.py`にTHEME = 'テーマ名'を追加する。<br><br>
 

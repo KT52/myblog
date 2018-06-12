@@ -95,7 +95,7 @@ git push origin master
 ```
 
 全部GitHubにあげてみたけど、仮想環境（venv）のlibディレクトリとかScripitsディレクトリとか要らなくね？
-ってことで、.gitignoreに"/Lib"、"/Scripts"を追記した。  
+ってことで、.gitignoreに"Lib/"、"Scripts/"等を追記した。  
   
 pelicanのテーマとプラグインを導入している場合はそのディレクトリもGitHubにpushすること。
 

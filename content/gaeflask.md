@@ -91,7 +91,7 @@ def test():
 
 ### デプロイ
 
-`gcloud app deploy app.yaml --project idkidc-980`でデプロイ。<br>
+`gcloud app deploy app.yaml --project プロジェクト名`でデプロイ。<br>
 `https://プロジェクト名.appspot.com/`にアクセスして"Hello World!"が表示されていることを確認。
 
 参考サイト<br>
