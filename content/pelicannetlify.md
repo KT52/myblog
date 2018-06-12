@@ -104,5 +104,5 @@ pelicanのテーマとプラグインを導入している場合はそのディ�
 NetlifyのコンソールページからDeploys→Deploy settingsに進んで、Build commandに`pelican content`、Publish directoryに`/output`を記入してsave。  
 GitHubにpushしているとNetlifyが自動でデプロイしてくれる。
 
-logに何もエラーが表示されていなければ成功  
-<a href="../../../images/deploy.jpg" data-toggle="lightbox" data-max-width="100%"><img src="../../../images/deploy.jpg" width="200" alt="deploy" class="img-thumbnail"></a>  
+Deploysページに"published"が表示されていれば成功。  
+<a href="../../../images/deploy2.jpg" data-toggle="lightbox" data-max-width="100%"><img src="../../../images/deploy2.jpg" width="200" alt="deploy" class="img-thumbnail"></a>  
