@@ -4,10 +4,10 @@ from __future__ import unicode_literals
 
 
 AUTHOR = u'kt'
-SITENAME = u'gaeblog'
+SITENAME = u'Aimless Blog'
 SITEURL = ''
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
-ABOUT_ME = u'Python beginner'
+ABOUT_ME = u'備忘録的ブログ'
 AVATAR = 'images/profile.png'
 
 # Localeを記入することでUnicodeDecodeErrorを回避
@@ -39,6 +39,7 @@ FEED_ALL_RSS = None
 DISPLAY_TAGS_ON_SIDEBAR_LIMIT = 5
 DISPLAY_LINKS_ON_SIDEBAR_LIMIT = 5
 DISPLAY_BREADCRUMBS = True
+DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_CATEGORY_IN_BREADCRUMBS = True
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
 DISPLAY_ARCHIVE_ON_SIDEBAR = True
