@@ -8,7 +8,7 @@ Slug:　pelicangae
 ## PelicanをGAEで使う
 
 Google App Engine（以下GAE）は静的サイトもホスティングできるので、Pythonの静的サイトジェネレーターPelicanを使ったブログサイトを作ってみた。<br>
-なお、GAEの利用法（Google Cloud SDKとか)とPelicanの使い方については省きます。
+なお、GAEの利用法（Google Cloud SDKとか)は省きます。Pelicanの使用法は[前に書いた記事](https://www.ravness.com/2018/03/pelicangithub/)を参照してください。
 
 ### GAEの新しいプロジェクトを作成する
 
