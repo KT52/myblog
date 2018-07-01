@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'kt'
 SITENAME = u'Aimless Blog'
-SITEURL = ''
+SITEURL = 'ravness.com'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 ABOUT_ME = u'備忘録的ブログ'
 AVATAR = 'images/profile.png'
