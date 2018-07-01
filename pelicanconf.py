@@ -82,3 +82,5 @@ STATIC_PATHS = ['images','static']
 CUSTOM_CSS = 'static/css/ekko-lightbox.css'
 CUSTOM_JS = 'static/js/ekko-lightbox.min.js'
 #CUSTOM_CSS = 'static/css/my.css'
+
+GOOGLE_ANALYTICS = 'UA-67464867-3'
