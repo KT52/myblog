@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "https://happy-hugle-pelican.netlify.com/*"
+  to = "https://www.ravness.com/:splat"
+  status = 301
