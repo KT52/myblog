@@ -8,7 +8,7 @@ SITENAME = u'Aimless Blog'
 SITEURL = 'www.ravness.com'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 ABOUT_ME = u'備忘録的ブログ'
-AVATAR = 'images/profile.png'
+AVATAR = ''
 
 # Localeを記入することでUnicodeDecodeErrorを回避
 LOCALE = ('usa', 'jpn',      # On Windows
