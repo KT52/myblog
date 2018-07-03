@@ -84,5 +84,3 @@ CUSTOM_JS = 'static/js/ekko-lightbox.min.js'
 #CUSTOM_CSS = 'static/css/my.css'
 
 GOOGLE_ANALYTICS = 'UA-67464867-3'
-
-ADDTHIS_PROFILE = 'ra-5b3b6c6367750cca'
