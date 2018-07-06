@@ -4,11 +4,11 @@ Category:	Pelican
 Tags: Python,GitHub,Pelican
 Slug:　pelicangithub
 
-今更ながら静的サイトジェネレーターというものの存在を知って、GitHub Pagesに[Pelican](http://docs.getpelican.com/en/stable/)を使ってブログを実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。<br><br>
+今更ながら静的サイトジェネレーターというものの存在を知って、GitHub Pagesに[Pelican](http://docs.getpelican.com/en/stable/){:target="_blank"}を使ってブログを実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。<br><br>
 
 ### GitHubに登録
 Gitが使えるという前提で進めていきます。  
-まずは[GitHub](https://github.com/)でアカウントを作成。<br><br>
+まずは[GitHub](https://github.com/){:target="_blank"}でアカウントを作成。<br><br>
 
 ### レポジトリを作成
 `Repository name`に`ユーザーネーム.github.io`と打ち込んで`Create Repository`をクリックして新規作成。  
@@ -94,7 +94,7 @@ pelicanconf.pyに`STATIC_PATHS = ['images']`のように記述。
 
 ### テーマを導入
 
-デフォルトのテーマを変えたい場合、自作するか、[Pelican Themes](http://pelicanthemes.com/)からお気に入りのものをダウンロードして適用することも出来ます。
+デフォルトのテーマを変えたい場合、自作するか、[Pelican Themes](http://pelicanthemes.com/){:target="_blank"}からお気に入りのものをダウンロードして適用することも出来ます。
 themesディレクトリを作ってそこにダウンロードしたテーマを入れたら、`pelican-themes --i [テーマの入ったディレクトリ]`で導入することが出来ます。  
 僕は"pelican-bootstrap3"というテーマを選んだので、`pelican-themes --i themes/pelican-bootstrap3`で入れました。  
 ちゃんと入ったかを確認するには`pelican-themes -l`  
@@ -113,6 +113,6 @@ pipでghp-importを入れておくと、GitHub pagesへの公開が楽に行え�
 実際に作ったのが[こちら](https://squigly77.github.io/)。テーマはFlexを使用。
 
 ### 参考サイト
-[Pelican](http://docs.getpelican.com/en/stable/)  
-[Pythonの静的サイトジェネレータ"Pelican"でお手軽にブログをはじめる手順](https://qiita.com/ogrew/items/ecef0a4700d5bd4d875d)  
-[PELICAN + GITHUB PAGES でブログを作った話](http://daikishimada.github.io/pelican-start.html)
+[Pelican](http://docs.getpelican.com/en/stable/){:target="_blank"}  
+[Pythonの静的サイトジェネレータ"Pelican"でお手軽にブログをはじめる手順](https://qiita.com/ogrew/items/ecef0a4700d5bd4d875d){:target="_blank"}  
+[PELICAN + GITHUB PAGES でブログを作った話](http://daikishimada.github.io/pelican-start.html){:target="_blank"}

@@ -118,8 +118,8 @@ automatic_scaling:
 インスタンスは一番性能が低いが28インスタンス時間が無料のf1-micro、`max_idle_instances: 1`でidle状態にあるインスタンスの最大値を1にして複数インスタンスが起動しないようにする。<br><br>
 
 ### 参考サイト
-[Google App Engine で静的ウェブサイトをホストする](https://cloud.google.com/appengine/docs/standard/php/getting-started/hosting-a-static-website?hl=ja)<br>
-[Pelican](http://docs.getpelican.com/)<br>
-[Pelican Hosting on AppEngine](http://www.craigjperry.com/pelican-hosting-on-appengine.html)<br>
-[Google App Engineを無料で運用する方法（2018年版）](http://koni.hateblo.jp/entry/2016/01/06/130613)
+[Google App Engine で静的ウェブサイトをホストする](https://cloud.google.com/appengine/docs/standard/php/getting-started/hosting-a-static-website?hl=ja){:target="_blank"}<br>
+[Pelican](http://docs.getpelican.com/){:target="_blank"}<br>
+[Pelican Hosting on AppEngine](http://www.craigjperry.com/pelican-hosting-on-appengine.html){:target="_blank"}<br>
+[Google App Engineを無料で運用する方法（2018年版）](http://koni.hateblo.jp/entry/2016/01/06/130613){:target="_blank"}
 

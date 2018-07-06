@@ -8,7 +8,7 @@ Slug:　pelicannetlify
 
 ## Netlifyとは？
 
-[Netlify](https://www.netlify.com/)とは静的コンテンツベースのウェブサイトに特化したWEBホスティングサービスです。  PelicanやHexoなどの静的サイトジェネレーターでウェブサイトを公開するのに便利なサービスです。他にはGitHub Pagesなどがありますね。  
+[Netlify](https://www.netlify.com/){:target="_blank"}とは静的コンテンツベースのウェブサイトに特化したWEBホスティングサービスです。  PelicanやHexoなどの静的サイトジェネレーターでウェブサイトを公開するのに便利なサービスです。他にはGitHub Pagesなどがありますね。  
 GitHubやGitLabと連携してリポジトリからデプロイしたり、連携しなくてもhtmlファイルなどが入ったフォルダをzipで固めて直接ドラッグアンドドロップでアップロードするだけでサイトを公開できます。  
 
 ## Netlifyの特長
@@ -27,8 +27,8 @@ cloudflareなどのサービスを使わずにキャッシュして高速化す�
 
 - フォームの設置
 
-他にもいろいろな機能があります。詳しくは→[Docs](https://www.netlify.com/docs/)参照。  
-GitHub Pagesとの比較は[コチラ](https://www.netlify.com/github-pages-vs-netlify/)を参照してください。  
+他にもいろいろな機能があります。詳しくは→[Docs](https://www.netlify.com/docs/){:target="_blank"}参照。  
+GitHub Pagesとの比較は[コチラ](https://www.netlify.com/github-pages-vs-netlify/){:target="_blank"}を参照してください。  
 デメリットは日本語未対応なことでしょうか。
 
 ## Freeプラン
