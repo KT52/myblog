@@ -43,7 +43,7 @@ Freeプランでどれくらい利用できるのかというと、
 
 ログインはGitHub、GitLab、Bitbucket、Emailから可能
 
-## Gitと連携
+## GitHubと連携
 
 使用するリポジトリを選ぶ。
 
