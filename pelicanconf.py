@@ -91,5 +91,5 @@ ADDTHIS_FACEBOOK_LIKE = False
 ADDTHIS_TWEET = False
 ADDTHIS_GOOGLE_PLUSONE = False
 
-DIRECT_TEMPLATES = ('sitemap')
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
 SITEMAP_SAVE_AS = 'sitemap.xml'
