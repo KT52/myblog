@@ -220,6 +220,7 @@ Route::get('/hello', function () {
 ### コントローラー
 
 <br>
+ルートファイルに全リクエストの処理を書いても問題ないけど、分離して管理したいときはコントローラクラスを使用する。  
 コントローラーの作成は`php artisan make:controller コントローラ名`で、app\Http\Controllers\に作成される。
 
 ```php
