@@ -1,4 +1,4 @@
-Title: 【自分用メモ】Larave入門
+Title: 【自分用メモ】Laravel入門
 Date: 2018-07-21
 Category: Laravel
 Tags: laravel,php
