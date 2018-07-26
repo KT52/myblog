@@ -189,7 +189,7 @@ Route::get('/', function () {
 });
 ```
 
-`http://localhost:8000` にアクセスするとHello Worldが表示される。<br>
+`php artisan serve`でローカルサーバーを起動して、`http://localhost:8000` にアクセスするとHello Worldが表示される。<br>
 
 ### ビュー
 
