@@ -64,7 +64,7 @@ Eloquent ORMというO/Rマッパーを使用するにはモデルを作成す�
 
 <br>
 `php artisan make:model クラス名（ここではBooklist）`と打つとappディレクトリにBooklist.phpが作成される。
-マイグレーションに必要なファイルを生成する場合は`php artisan make:model Booklist -m`。
+マイグレーションに必要なファイルも一緒に生成する場合は`php artisan make:model Booklist -m`。
 
 ```php
 
