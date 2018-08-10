@@ -8,14 +8,24 @@ Google App EngineでFlaskを使う時のチュートリアル
 
 ### Google App Engineでサードパーティ製ライブラリを使う
 
-GAEでサードパーティ製ライブラリを使うにはルートディレクトリにlibディレクトリを作ってそこにライブラリをインストールします。Flaskをインストールする場合は
+GAEでサードパーティ製ライブラリを使うにはルートディレクトリにlibディレクトリを作ってそこにライブラリをインストールします。  
+最初にvirtualenvで仮想環境化します。  
+Flaskをインストールする場合は
 ```
 
 mkdir lib
 pip install -t lib/ Flask
 ```
 
-これでlibディレクトリにFlaskがインストールされました。
+これでlibディレクトリにFlaskがインストールされました。  
+
+他のライブラリも同様に入れることができます。requirements.txtを作成して一気に入れる場合は、
+
+```python
+pip install -t lib -r requirements.txt
+```
+でライブラリをインストールできます。
+
 
 ### appengine_config.py
 
@@ -39,14 +49,7 @@ myproject/
   main.py
 ```
 
-なお、このページにある[組み込みサードパーティ ライブラリ](https://cloud.google.com/appengine/docs/standard/python/tools/built-in-libraries-27?hl=ja)はインストールする必要はなく、app.yamlに記述するだけで良い
 
-```yaml
-
-libraries:
-- name: jinja2
-  version: latest
-```
 
 ### app.yaml
 
