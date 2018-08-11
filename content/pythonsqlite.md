@@ -27,7 +27,7 @@ sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current sta
 g.db.execute("SELECT * FROM school WHERE name like ?",('%'+word+'%',))
 ```
 
-<br>あと、よくあるミスとして項目が1個のときはexecuteの第2引数はタプルにしないといけないのを忘れるのも注意。   
+<br>あと、よくあるミスとしてプレースホルダの項目が1個のときもexecuteの第2引数はタプルにしないといけないのを忘れるのも注意。   
 <br>[pythonドキュメントより](https://docs.python.jp/3/library/sqlite3.html){:target="_blank"}<br>
 > ? を変数の値を使いたいところに埋めておきます。その上で、値のタプルをカーソルの execute() メソッドの第2引数として引き渡します。
 
