@@ -49,7 +49,15 @@ myproject/
   main.py
 ```
 
+[「組み込みサードパーティ ライブラリ」](https://cloud.google.com/appengine/docs/standard/python/tools/built-in-libraries-27?hl=ja){:target="_blank"}にあるライブラリははapp.yamlに記述するだけでいい
 
+```yaml
+libraries:
+- name: jinja2
+  version: 2.6
+```
+
+でも、ローカルサーバーで使用する場合は結局libディレクトリ内にインストールする必要があると思うので、この記述は意味あるの？
 
 ### app.yaml
 
