@@ -1,4 +1,4 @@
-Title: GCPのデータストアにcsvのデータを一括で登録する （非推奨）
+Title: GCPのデータストアにcsvのデータを一括で登録する2
 Date: 2018-08-15
 Category: GAE
 Tags: Python,GAE
