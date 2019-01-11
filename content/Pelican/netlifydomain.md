@@ -11,8 +11,7 @@ Netlifyで独自ドメインを設定してみた
 
 ![Xdomain](../../../images/xdomaintop.jpg)  <br>
 
-他サイトのドメインはムームードメインを利用しているが、今回はドメインを<a href="https://px.a8.net/svt/ejp?a8mat=356RAJ+GF7GHE+CO4+15PEXE" target="_blank" rel="nofollow">Xdomain</a>
-<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=356RAJ+GF7GHE+CO4+15PEXE" alt="">で取得することにしました。<br><br>
+他サイトのドメインはムームードメインを利用しているが、今回はドメインを[Xdomain（エックスドメイン）](https://www.xdomain.ne.jp/){:target="_blank"}で取得することにしました。<br><br>
 
 - エックスドメインの良いところ
 	- 更新料が安い  
