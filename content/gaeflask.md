@@ -4,7 +4,8 @@ Category: GAE
 Tags: Python,GAE
 Slug: gaeflask
 
-Google App EngineでFlaskを使う時のチュートリアル
+Google App EngineでFlaskを使う時のチュートリアル。  
+環境はスタンダード、Python2系。
 
 ### Google App Engineでサードパーティ製ライブラリを使う
 
