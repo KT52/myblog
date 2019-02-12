@@ -136,4 +136,4 @@ $offset = $this->input->get('per_page') ? ($this->input->get('per_page')-1)*$lim
 これで1ページ目はper_pageがないので0を返し、2ページはper_pageが2なので(2-1)*12で12。そのあとは24、36とオフセット値がセットされます。<br><br>
 
 per_page=をpage=と表示させたい場合は`$config['query_string_segment'] = 'page';`を設定して<br>
-コントローラーのper_pageをpageに変更。
+コントローラーの$offset = $this->input->get('per_page')を$offset = $this->input->get('page')に変更。
