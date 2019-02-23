@@ -12,9 +12,9 @@ CodeIgniterでpaginationのサンプルを紹介するサイトはいっぱい�
 ---
 
 $config['base_url']、$config['total_rows']、$config['per_page']が必須項目。  
-`$config[‘reuse_query_string’] = TRUE;`で?q=ホニャララのクエリストリングを２ページ目以降に引き継ぐことができます。  
+`$config['reuse_query_string'] = TRUE;`で?q=ホニャララのクエリストリングを２ページ目以降に引き継ぐことができます。  
 これで試してみると今度はyoursite.com/class/ページfunction?q=ホニャララとなってしまいページネーションがうまく動作しないので、  
-`$config[‘page_query_string’] = TRUE;`を設定する。<br>この設定で末尾に`&per_page=ページ`のクエリストリングがつくようになるので、`yoursite.com/class/function?q=ホニャララ&per_page=ページ`と表示されるようになります。
+`$config['page_query_string'] = TRUE;`を設定する。<br>この設定で末尾に`&per_page=ページ`のクエリストリングがつくようになるので、`yoursite.com/class/function?q=ホニャララ&per_page=ページ`と表示されるようになります。
 
 ページネーションの設定はこんな感じ
 
