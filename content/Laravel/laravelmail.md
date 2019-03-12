@@ -3,6 +3,7 @@ Date: 2018-07-26
 Category: Laravel
 Tags: laravel,php
 Slug: laravelmail
+related_posts: laravelauth
 
 [前回](https://www.ravness.com/2018/07/laravelauth){:target="_blank"}
 Laravelの認証機能のパスワードリセットでメール送信できなかった問題の解決法。

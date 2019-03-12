@@ -49,10 +49,11 @@ TAG_CLOUD_MAX_ITEMS = 10
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
 PYGMENTS_STYLE = 'monokai'
 SUMMARY_MAX_LENGTH = 20
+RELATED_POSTS_MAX = 3
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['i18n_subsites', "tag_cloud"]
+PLUGINS = ['i18n_subsites', "tag_cloud", "related_posts"]
 
 
 # Blogroll

@@ -3,6 +3,7 @@ Date: 2018-07-25
 Category: Laravel
 Tags: laravel,php
 Slug: laravelauth
+related_posts: laravelmail
 
 Laravelの認証機能をローカル環境で試してみた。環境はLaravel5.6 Windows10 Xampp php7.2.6
 

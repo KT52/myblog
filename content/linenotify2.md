@@ -3,6 +3,7 @@ Date: 2018-12-02
 Category: Python
 Tags: python
 Slug: linescraping
+related_posts: linenotify, herokulinenotify
 
 ## はじめに
 
