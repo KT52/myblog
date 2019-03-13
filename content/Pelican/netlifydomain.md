@@ -11,17 +11,19 @@ Netlifyで独自ドメインを設定してみた
 
 ![Xdomain](../../../images/xdomaintop.jpg)  <br>
 
-他サイトのドメインはムームードメインを利用していますが、今回はドメインを<a href="https://px.a8.net/svt/ejp?a8mat=356RAJ+GF7GHE+CO4+15PEXE" target="_blank" rel="nofollow">Xdomain</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=356RAJ+GF7GHE+CO4+15PEXE" alt="">で取得することにしました。<br><br>
+他サイトのドメインはムームードメインを利用していますが、今回はドメインをXdomain<a href="https://px.a8.net/svt/ejp?a8mat=356RAJ+GF7GHE+CO4+15PEXE" target="_blank" rel="nofollow">（リンク）</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=356RAJ+GF7GHE+CO4+15PEXE" alt="">で取得することにしました。<br><br>
 
-`ドメインの検索`→`会員登録`→`お支払い情報の入力`→`内容の確認・規約への同意`→`申込み完了`と進んで10～20分で簡単にドメインを取得できます。（クレカ払いの場合）
+`ドメインの検索`→`会員登録`→`お支払い情報の入力`→`内容の確認・規約への同意`→`申込み完了`と進んで10～20分で簡単にドメインを取得できます。（クレカ払いの場合）<br>
 
 ### Netlifyにカスタムドメインを登録
 ---
+
 Domain Setting→Add custom domainと進んで取得したドメインを入力`(www).xxx.com` を入力して`Verify`をクリック  
-Netlifyはwww付きのドメインをプライマリードメインとして推奨しているようです。なのでwww付きで登録しました。
+Netlifyはwww付きのドメインをプライマリードメインとして推奨しているようです。なのでwww付きで登録しました。<br>
 
 ### DNS設定
 ---
+
 `Verify`をクリックした後はこんな画面になるので`Check DNS Configuration`をクリック。
 
 ![dns](../../../images/checkdns.jpg)<br>
@@ -41,21 +43,21 @@ wwwなしのドメインでAレコードをドメインプロバイダーのDNS�
 
 ### ネームサーバーの変更
 ---
-`Set up Netlify DNS~~`をクリックして進めていくとDNSレコードをNetlifyが勝手に設定してくれて、更に進むと4つのネームサーバーが表示されるのでコピーしてエックスドメインの「ネームサーバーの確認・変更」から４つのネームサーバーをペーストする。
+`Set up Netlify DNS~~`をクリックして進めていくとDNSレコードをNetlifyが勝手に設定してくれて、更に進むと4つのネームサーバーが表示されるのでコピーしてエックスドメインの「ネームサーバーの確認・変更」から４つのネームサーバーをペーストする。<br><br>
 
 
-![nameserver](../../../images/nameservers.jpg)   
+![nameserver](../../../images/nameservers.jpg)
 
-DNSが浸透すると独自ドメインでアクセスできるようになる。
+<br>DNSが浸透すると独自ドメインでアクセスできるようになります。
 
 
-![domainset](../../../images/domainset.jpg)
+![domainset](../../../images/domainset.jpg)<br>
 
 
 ### Let’s Encryptの証明書を取得
 ---
 カスタムドメインを設定したらHTTPSの`Verify DNS configuration`→`Let's Encypt certificate`をクリック。しばらくすると証明書を取得できます。  
-下の画面のような表示になれば成功。    
+下の画面のような表示になれば成功。   
 
 
 ![https](../../../images/https.jpg)
@@ -65,6 +67,10 @@ DNSが浸透すると独自ドメインでアクセスできるようになる�
 ---
 Force HTTPSをクリックしてhttpでのアクセスをhttpsにリダイレクトさせる。
 
+### DNS 設定 （2019年3月13日追記）
+---
+
+Netlify DNSを使用してDNSレコードを自動でセッティングした後にMXレコード等のレコードを追加する場合は、<br>`Domain Settings`からCustom Domainsの`Netlify DNS`をクリックして設定ページに移動、`Add new record`で追加できます。
 
 ### 感想
 ---

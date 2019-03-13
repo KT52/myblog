@@ -7,7 +7,7 @@ Slug: datastorecsv
 ## bulkloaderでアップロード
 ---
 
-Google Cloud Platform (GCP)のデータストアにcsvファイルから一括でアップロードする場合、bulkloaderを使ってアップロードすることができます。
+Google Cloud Platform (GCP)のデータストアにGoogle App Engine（GAE)経由でcsvファイルから一括でアップロードする場合、bulkloaderを使ってアップロードすることができます。
 
 環境はPythonのスタンダードでデータとしてフリーの住所データを使用しています。
 Kind名はaddress プロパティはbango,ken,shiku,chousonの４つでいずれもstring（文字列）
