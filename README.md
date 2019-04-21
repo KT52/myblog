@@ -1,2 +1,2 @@
 # myblog
-manage blog
+https://ravness.com
