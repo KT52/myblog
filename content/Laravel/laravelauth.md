@@ -85,18 +85,22 @@ Reset Passwordボタンをクリックした先のページで新しいパスワ
 ルート定義でルートミドルウェアを指定するだけで済みます。  
 
 ```php
+
 Route::get('profile', function() {
     // 認証済みのユーザーのみが入れる
 })->middleware('auth');
+
 ```
 
 コントローラを使っているなら、コントローラのコンストラクターでmiddlewareメソッドを呼び出すだけでいい
 
 ```php
+
 public function __construct()
 {
     $this->middleware('auth');
 }
+
 ```
 
 ### おわりに
