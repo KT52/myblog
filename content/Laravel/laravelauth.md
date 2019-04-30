@@ -79,6 +79,26 @@ MAIL_ENCRYPTION=null
 Reset Passwordボタンをクリックした先のページで新しいパスワードを入力する。  
 ローカルサーバーでテスト中の場合はアドレスがhttp://localhost/password/reset/英数字の羅列になってるのでlocalhost:8000に修正してアクセスしてください。
 
+### ルートの保護
+---
+(2019/04/30追記）認証済みユーザーのみのアクセスを許したい場合は、ルートミドルウェアを使います。  
+ルート定義でルートミドルウェアを指定するだけで済みます。  
+
+```php
+Route::get('profile', function() {
+    // 認証済みのユーザーのみが入れる
+})->middleware('auth');
+```
+
+コントローラを使っているなら、コントローラのコンストラクターでmiddlewareメソッドを呼び出すだけでいい
+
+```php
+public function __construct()
+{
+    $this->middleware('auth');
+}
+```
+
 ### おわりに
 ---
 `php artisan make:auth`と`php artisan migrate`を実行すればこちらで何かを設定することなく「ログイン」「ユーザ登録」「パスワードリセット」機能を実装できるのですごく簡単。  
