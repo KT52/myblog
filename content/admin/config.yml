@@ -19,5 +19,6 @@ collections:
       - {label: "Publish Date", name: "Date", widget: "date",format: "YYYY-MM-DD"}
       - {label: "Category", name: "Category", widget: "list"}
       - {label: "Tags", name: "Tags", widget: "list"}
+      - { label: "Slug", name: "Slug", widget: "string" }
       - {label: "Related", name: "related_post", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
