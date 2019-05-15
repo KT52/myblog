@@ -1,5 +1,5 @@
 ---
-Title: test
+Title: Netlify CMSのテスト
 Date: '2019-05-15'
 Category:
   - Misc
