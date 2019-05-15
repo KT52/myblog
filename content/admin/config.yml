@@ -1,5 +1,5 @@
 backend:
-  name: Squigly77/myblog
+  repo: git-gateway
   branch: master
 
 publish_mode: editorial_workflow
