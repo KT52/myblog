@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Squigly77/myblog
+  repo: github.com/Squigly77/myblog
   branch: master
 
 publish_mode: editorial_workflow
