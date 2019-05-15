@@ -17,7 +17,6 @@ collections:
     fields:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Publish Date", name: "Date", widget: "date",format: "YYYY-MM-DD"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Category", name: "Categories", widget: "list"}
       - {label: "Tags", name: "Tags", widget: "list"}
       - {label: "Related", name: "related_post", widget: "list", required: false}
