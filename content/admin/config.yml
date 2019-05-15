@@ -12,6 +12,7 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "content"
+    identifier_field: "title"
     create: true
     slug: "{{slug}}"
     fields:
