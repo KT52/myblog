@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: Squigly77/myblog
   branch: master
 
