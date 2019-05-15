@@ -18,8 +18,8 @@ collections:
     fields:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Publish Date", name: "Date", widget: "date",format: "YYYY-MM-DD"}
-      - {label: "Category", name: "Category", widget: "list"}
-      - {label: "Tags", name: "Tags", widget: "list"}
+      - {label: "Category", name: "Category", widget: "string"}
+      - {label: "Tags", name: "Tags", widget: "string"}
       - { label: "Slug", name: "Slug", widget: "string" }
-      - {label: "Related", name: "related_post", widget: "list", required: false}
+      - {label: "Related", name: "related_post", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
