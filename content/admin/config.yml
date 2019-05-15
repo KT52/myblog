@@ -1,5 +1,6 @@
 backend:
-  repo: git-gateway
+  name: github
+  repo: Squigly77/myblog
   branch: master
 
 publish_mode: editorial_workflow
