@@ -4,7 +4,8 @@ Date: '2019-05-15'
 Category:
   - Misc
 Tags:
-  - netlify pelican
+  - netlify
+  - pelican
 Slug: test
 ---
 # test
