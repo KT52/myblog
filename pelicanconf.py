@@ -76,8 +76,11 @@ RELATIVE_URLS = True
 THEME = './themes/pelican-bootstrap3'
 BOOTSTRAP_THEME = 'yeti'
 
+#template pages
+TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
+
 #static files path
-STATIC_PATHS = ['images','static']
+STATIC_PATHS = ['images','static','admin']
 
 #custom css
 CUSTOM_CSS = 'static/css/ekko-lightbox.css'
