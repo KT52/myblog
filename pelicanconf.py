@@ -80,7 +80,7 @@ BOOTSTRAP_THEME = 'yeti'
 TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
 
 #static files path
-STATIC_PATHS = ['images','static','admin']
+STATIC_PATHS = ['images','static','admin','Laravel']
 
 #custom css
 CUSTOM_CSS = 'static/css/ekko-lightbox.css'
