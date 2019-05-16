@@ -11,4 +11,4 @@ Slug: netlifycmstest
 
 
 
-![test](/content/images/tumblr_inline_ovcrrtwwyg1tui8uv_540.jpg)
+![test](../../../tumblr_inline_ovcrrtwwyg1tui8uv_540.jpg)
