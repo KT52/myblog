@@ -7,6 +7,7 @@ Slug: test
 ---
 # test
 
-この記事はテスト投稿です。  
+この記事はNetlify CMSからのテスト投稿です。  
+
 
 ![test](/images/tumblr_inline_ovcrrtwwyg1tui8uv_540.jpg)
