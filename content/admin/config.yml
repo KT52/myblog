@@ -9,8 +9,8 @@ media_folder: "images"
 public_folder: "images"
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - label: "Blog"
+    name: "blog"
     folder: "content"
     create: true
     slug: "{{slug}}"
@@ -18,7 +18,22 @@ collections:
     fields:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Publish Date", name: "Date", widget: "date",format: "YYYY-MM-DD"}
-      - {label: "Modified", name: "Modified", widget: "date",format: "YYYY-MM-DD", required: false}
+      - {label: "Modified", name: "Modified", widget: "string", required: false}
+      - {label: "Category", name: "Category", widget: "string"}
+      - {label: "Tags", name: "Tags", widget: "string"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related", name: "related_post", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Laravel"
+    name: "blog/laravel"
+    folder: "content/Laravel"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "{{title}}"
+    fields:
+      - {label: "Title", name: "Title", widget: "string"}
+      - {label: "Publish Date", name: "Date", widget: "date",format: "YYYY-MM-DD"}
+      - {label: "Modified", name: "Modified", widget: "string", required: false}
       - {label: "Category", name: "Category", widget: "string"}
       - {label: "Tags", name: "Tags", widget: "string"}
       - {label: "Slug", name: "Slug", widget: "string"}
