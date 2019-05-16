@@ -14,7 +14,7 @@ collections:
     folder: "content"
     create: true
     slug: "{{slug}}"
-    identifier_field: name
+    identifier_field: Title
     fields:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Publish Date", name: "Date", widget: "date",format: "YYYY-MM-DD"}
