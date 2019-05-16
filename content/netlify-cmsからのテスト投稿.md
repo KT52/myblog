@@ -1,0 +1,14 @@
+---
+Title: Netlify CMSからのテスト投稿
+Date: '2019-05-16'
+Category: Misc
+Tags: 'netlify, pelican'
+Slug: netlifycmstest
+---
+# test
+
+この記事はNetlify CMSからのテスト投稿です。  
+
+
+
+![test](/content/images/tumblr_inline_ovcrrtwwyg1tui8uv_540.jpg)
