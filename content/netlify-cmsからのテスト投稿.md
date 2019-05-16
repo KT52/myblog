@@ -1,5 +1,5 @@
 ---
-Title: Netlify CMSからのテスト投稿
+Title: netlifycmstest
 Date: '2019-05-16'
 Category: Misc
 Tags: 'netlify, pelican'
