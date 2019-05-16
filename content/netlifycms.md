@@ -9,8 +9,8 @@ Slug: netlifycms
 
 - - -
 
-Netlify CMSは静的サイトジェネレーターにWordpressのような管理画面を追加するオープンソースのコンテンツ管理システムです。\
-多分Wordpressのデータベースの代わりにGitHubやGitLabを利用して管理しているのでしょう。  
+[Netlify CMS](https://www.netlifycms.org/){:target="_blank"}は静的サイトジェネレーターにWordpressのような管理画面を追加するオープンソースのコンテンツ管理システムです。\
+Wordpressのデータベースの代わりにGitHubやGitLabのリポジトリを利用して管理しているようです。  
 
 このブログは静的サイトジェネレーターのPelicanを利用していますがここにNetlify CMSを追加してみようと思います。
 
