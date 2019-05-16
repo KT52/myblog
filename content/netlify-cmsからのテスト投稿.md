@@ -9,4 +9,4 @@ Slug: netlifycmstest
 
 この記事はNetlify CMSからのテスト投稿です。  
 
-![test](/output/images/tumblr_inline_ovcrrtwwyg1tui8uv_540.jpg)
+![test](/../../../images/tumblr_inline_ovcrrtwwyg1tui8uv_540.jpg)
