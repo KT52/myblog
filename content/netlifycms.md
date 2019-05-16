@@ -47,3 +47,5 @@ Netlifyのsite settingsの一番下にある`Access control`→`OAuth`→`Instal
 これでNetlifyの設定は終了です。  
 
 ![installprovider](/../../../images/installprovider.jpg)
+
+## Netlify CMS用のファイルを作成
