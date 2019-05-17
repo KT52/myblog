@@ -17,7 +17,7 @@ collections:
     identifier_field: title
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "date",format: "YYYY-MM-DD"}
+      - {label: "Date", name: "date", widget: "date",format: "YYYY-MM-DD"}
       - {label: "Modified", name: "modified", widget: "string", required: false}
       - {label: "Category", name: "category", widget: "string"}
       - {label: "Tags", name: "tags", widget: "string"}
