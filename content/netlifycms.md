@@ -123,7 +123,7 @@ markdownファイルを配置しているフォルダーの場所を指定。通
 - slug  
 urlの最後の部分の設定と生成される.mdファイル名の設定。  
 デフォルトの{{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。  
-なので、`{{fields.slug}}`とすることでfieldsのslugを参照するようになります。
+`{{fields.slug}}`とすることでfieldsのslugを参照するようになります。
 - identifier_field  
 Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。      僕はタイトルを指定しているので各記事のタイトルが表示される。
 - fields  
