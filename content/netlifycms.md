@@ -43,20 +43,20 @@ Application nameは適当にHomepage URLはブログのURL、`Authorization call
 
 - - -
 
-Netlifyのsite settingsの一番下にある`Access control`→`OAuth`→`Install provider`をクリック。すると下記の画面になるので先程のClient IDと Client Secretを入力して`install`を押します。  
+Netlifyのsite settingsの一番下にある`Access control`→`OAuth`→`Install provider`をクリック。すると下記の画面になるので先程のClient IDと Client Secretを入力して`install`を押します。\
 これでNetlifyの設定は終了です。  
 
 ![installprovider](/../../../images/installprovider.jpg)
 
 ## Netlify CMS用のファイルを作成
----
+
+- - -
 
 一旦ブラウザから離れてローカルのcontentディレクトリにadminディレクトリを作成して`index.html`、`config.yml`を作成します。
 
 ### index.htmlの中身
 
 ```html
-
 <!doctype html>
 <html>
 <head>
@@ -69,7 +69,6 @@ Netlifyのsite settingsの一番下にある`Access control`→`OAuth`→`Instal
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
-
 ```
 
 公式サイトからのコピペでOKです。
@@ -77,7 +76,6 @@ Netlifyのsite settingsの一番下にある`Access control`→`OAuth`→`Instal
 ### config.ymlの中身
 
 ```python
-
 backend:
   name: github
   repo: Squigly77/myblog
@@ -104,66 +102,62 @@ collections:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Related", name: "related_post", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-
 ```
 
 #### backend
+
 GitHubを使用している場合はrepoに使用するリポジトリとbranchを指定。
 
 #### publish_mode: editorial_workflow
-editorial_workflowというモードを設定することで下書き保存が可能になります。  
+
+editorial_workflowというモードを設定することで下書き保存が可能になります。\
 これがないと記事を作成してセーブすると即座に公開されてしまう。
 
 #### media/public_folder
 
-- media_folder  
-画像ファイル置き場の場所。  
-
-- public_folder  
-記事をアップロードした後に実際にアクセスされる画像ファイルのパス。  
-記事を書いてるとき画像のパスは、({static}/images/xxx.jpg)とか(../../../images/xxx.jpg)こんな感じに書きますよね。その部分をpublic_folderに指定します。
+* media_folder\
+  画像ファイル置き場の場所。  
+* public_folder\
+  記事をアップロードした後に実際にアクセスされる画像ファイルのパス。\
+  記事を書いてるとき画像のパスは、({static}/images/xxx.jpg)とか(../../../images/xxx.jpg)こんな感じに書きますよね。その部分をpublic_folderに指定します。
 
 #### collections
 
-- name（必須）  
-コレクションのユニークキー。
-- label  
-管理画面上のラベル。指定しない場合は上のnameが使用される。
-- folder（必須）  
-markdownファイルを配置しているフォルダーの場所を指定。通常は`content`。  
-Netlify CMS上で作成された記事はここに保存されます。カテゴリー等で分けてcontent以下にフォルダーを作成している場合は`content/folder名`。`content`にもcontent/folderにも.mdファイルが置いてある場合はそれぞれのコレクションを作成しなければならない。
-
-- create  
-これよくわからないのでグーグル翻訳をそのまま載せときます。  
-フォルダコレクション専用です。 trueの場合、ユーザーはコレクション内に新しい項目を作成できます。デフォルトはfalse
-
-- slug  
-urlの最後の部分の設定と生成される.mdファイル名の設定。  
-{{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。  
-なので、`{{fields.slug}}`とすることでfieldsのslugを参照するようになります。   
-
-- identifier_field  
-Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。  
-僕はタイトルを指定しているので各記事のタイトルが表示される。
-
-- fields  
-.mdファイルにおけるメタデータの設定。bodyは記事を書くフィールド。
-  - label  
-管理画面上で表示される名前とメタデータの`Title:`などの部分。
-  - name（必須）  
-フィールドのユニークな識別子。
-  - widget  
-フィールドのタイプ。stringなら文字、dateなら日付を
-  - required: false  
-必須項目ではないフィールドにする。  
+* name（必須）\
+  コレクションのユニークキー。
+* label\
+  管理画面上のラベル。指定しない場合は上のnameが使用される。
+* folder（必須）\
+  markdownファイルを配置しているフォルダーの場所を指定。通常は`content`。\
+  Netlify CMS上で作成された記事はここに保存されます。カテゴリー等で分けてcontent以下にフォルダーを作成している場合は`content/folder名`。`content`にもcontent/folderにも.mdファイルが置いてある場合はそれぞれのコレクションを作成しなければならない。
+* create\
+  これよくわからないのでグーグル翻訳をそのまま載せときます。\
+  フォルダコレクション専用です。 trueの場合、ユーザーはコレクション内に新しい項目を作成できます。デフォルトはfalse
+* slug\
+  urlの最後の部分の設定と生成される.mdファイル名の設定。\
+  {{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。\
+  なので、`{{fields.slug}}`とすることでfieldsのslugを参照するようになります。   
+* identifier_field\
+  Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。\
+  僕はタイトルを指定しているので各記事のタイトルが表示される。
+* fields\
+  .mdファイルにおけるメタデータの設定。bodyは記事を書くフィールド。
+  * label\
+    管理画面上で表示される名前とメタデータの`Title:`などの部分。
+  * name（必須）\
+    フィールドのユニークな識別子。
+  * widget\
+    フィールドのタイプ。stringなら文字、dateなら日付を
+  * required: false\
+    必須項目ではないフィールドにする。  
 
 folderのところでも書きましたが、markdownファイルをcontentとcontent/categoryみたいに分けて保存していて、Netlify CMSで作成された記事を任意の場所に保存したい場合はcollectionsのnameからfieldまでをそれぞれ記述しなければならないので注意。  
 
 ```yml
-
 - name: "blog"
     label: "Blog"
-    folder: "content" #contentフォルダ
+    folder: "content"
+ #contentフォルダ
     create: true
     slug: "{{fields.slug}}"
     identifier_field: title
@@ -172,7 +166,8 @@ folderのところでも書きましたが、markdownファイルをcontentとco
       #省略
 - name: "python"
     label: "python"
-    folder: "content/python" #content内のpythonフォルダー
+    folder: "content/python"
+ #content内のpythonフォルダー
     create: true
     slug: "{{fields.slug}}"
     identifier_field: title
@@ -184,33 +179,53 @@ folderのところでも書きましたが、markdownファイルをcontentとco
 以上でconfig.ymlの説明終わりです。
 
 ## pelicanconf.pyの編集
-----
+
+- - -
 
 pelicanconf.pyに
-```python
 
+```python
 #template pages
 TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
 
 #static files path
 STATIC_PATHS = ['images','static','admin'] #adminを追加
-
 ```
 
-を追加。  
+を追加。\
 markdownファイルをcontentフォルダのさらに下に置いてある場合はSTATIC_PATHSにそのフォルダ名を追記する必要があるかも（未確認）。
 
 ## GitHubにpush
----
+
+- - -
 
 準備が整ったのでGitHubにpush。
 
 ## 管理画面にアクセス
----
 
-サイトurl/adminにアクセスすると、  
+- - -
+
+サイトurl/adminにアクセスすると、ログイン画面が表示されるのでログイン。
+
+![login](/{static}/images/login.png)
+
+Netlify CMSの管理画面が表示されました！
+
+![netlifycmstop](/{static}/images/netlifycmstop.png)
+
+ただ、今まで書いた記事のタイトルは表示されず(泣)
+
+下書きを保存するWorkflowのページはこんな感じ。
+
+![netlifycmsflow](/{static}/images/cmsflow.png)
+
+new postをクリックして編集画面
+
+![cmsedit1](/{static}/images/cmsedit1.png)
+
+![cmsedit2](/{static}/images/cmsedit2.png)
+
+画像のアップロードはトップページのMediaからできます。
 
 
-
-
-
+![test](/{static}/images/dnsconf1.jpg)
