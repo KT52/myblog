@@ -172,10 +172,7 @@ pelicanconf.pyに
 
 ```python
 
-#template pages
 TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
-
-#static files path
 STATIC_PATHS = ['images','static','admin'] #adminを追加
 
 ```
