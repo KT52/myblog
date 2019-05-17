@@ -1,5 +1,5 @@
 ---
-Title: netlifycms
+Title: Netlify+PelicanにNetlify CMSを追加してみる
 Date: '2019-05-16'
 Category: Pelican
 Tags: 'netlify,pelican'
@@ -89,8 +89,8 @@ media_folder: "content/images"
 public_folder: "/{static}/images"
 
 collections:
-  - label: "Blog"
-    name: "blog"
+  - name: "blog"
+    label: "Blog"
     folder: "content"
     create: true
     slug: "{{fields.slug}}"
@@ -124,5 +124,28 @@ editorial_workflowというモードを設定することで下書き保存が�
 記事を書いてるとき画像のパスは、({static}/images/xxx.jpg)とか(../../../images/xxx.jpg)こんな感じに書きますよね。その部分をpublic_folderに指定します。
 
 #### collections
+
+- name（必須）  
+コレクションのユニークキー
+- label  
+管理画面上のラベル。指定しない場合は上のnameが使用される。
+- folder（必須）  
+フォルダーの場所を指定。通常は`content`。カテゴリー等でcontent以下にフォルダーを作成している場合は`content/folder名`。`content`にもcontent/folderにも.mdファイルが置いてある場合はそれぞれのコレクションを作成。
+
+- create  
+これよくわからないのでグーグル翻訳をそのまま載せときます。  
+フォルダコレクション専用です。 trueの場合、ユーザーはコレクション内に新しい項目を作成できます。デフォルトはfalse
+
+- slug  
+urlの最後の部分の設定と生成される.mdファイル名の設定。  
+{{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。  
+なので、`{{fields.slug}}`とすることでfieldsのslugを参照するようになります。   
+
+- identifier_field  
+Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。  
+僕はタイトルを指定しているので各記事のタイトルが表示される。
+
+- fields  
+
 
 
