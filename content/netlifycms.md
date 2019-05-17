@@ -126,11 +126,12 @@ editorial_workflowというモードを設定することで下書き保存が�
 #### collections
 
 - name（必須）  
-コレクションのユニークキー
+コレクションのユニークキー。
 - label  
 管理画面上のラベル。指定しない場合は上のnameが使用される。
 - folder（必須）  
-フォルダーの場所を指定。通常は`content`。カテゴリー等でcontent以下にフォルダーを作成している場合は`content/folder名`。`content`にもcontent/folderにも.mdファイルが置いてある場合はそれぞれのコレクションを作成。
+markdownファイルを配置しているフォルダーの場所を指定。通常は`content`。  
+Netlify CMS上で作成された記事はここに保存されます。カテゴリー等で分けてcontent以下にフォルダーを作成している場合は`content/folder名`。`content`にもcontent/folderにも.mdファイルが置いてある場合はそれぞれのコレクションを作成しなければならない。
 
 - create  
 これよくわからないのでグーグル翻訳をそのまま載せときます。  
@@ -153,6 +154,63 @@ Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定�
 フィールドのユニークな識別子。
   - widget  
 フィールドのタイプ。stringなら文字、dateなら日付を
-  - required: falseを指定すると必須項目ではないフィールドになる。
+  - required: false  
+必須項目ではないフィールドにする。  
+
+folderのところでも書きましたが、markdownファイルをcontentとcontent/categoryみたいに分けて保存していて、Netlify CMSで作成された記事を任意の場所に保存したい場合はcollectionsのnameからfieldまでをそれぞれ記述しなければならないので注意。  
+
+```yml
+
+- name: "blog"
+    label: "Blog"
+    folder: "content" #contentフォルダ
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      #省略
+- name: "python"
+    label: "python"
+    folder: "content/python" #content内のpythonフォルダー
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+　　　#省略
+```
+
+以上でconfig.ymlの説明終わりです。
+
+## pelicanconf.pyの編集
+----
+
+pelicanconf.pyに
+```python
+
+#template pages
+TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
+
+#static files path
+STATIC_PATHS = ['images','static','admin'] #adminを追加
+
+```
+
+を追加。  
+markdownファイルをcontentフォルダのさらに下に置いてある場合はSTATIC_PATHSにそのフォルダ名を追記する必要があるかも（未確認）。
+
+## GitHubにpush
+---
+
+準備が整ったのでGitHubにpush。
+
+## 管理画面にアクセス
+---
+
+サイトurl/adminにアクセスすると、  
+
+
+
 
 
