@@ -13,7 +13,7 @@ collections:
     name: "blog"
     folder: "content"
     create: true
-    slug: "{{fields.Slug}}"
+    slug: "{{fields.slug}}"
     identifier_field: Title
     fields:
       - {label: "Title", name: "Title", widget: "string"}
@@ -21,6 +21,6 @@ collections:
       - {label: "Modified", name: "Modified", widget: "string", required: false}
       - {label: "Category", name: "Category", widget: "string"}
       - {label: "Tags", name: "Tags", widget: "string"}
-      - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Related", name: "related_post", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
