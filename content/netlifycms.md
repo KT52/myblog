@@ -153,7 +153,7 @@ editorial_workflowというモードを設定することで下書き保存が�
 
 folderのところでも書きましたが、markdownファイルをcontentとcontent/categoryみたいに分けて保存していて、Netlify CMSで作成された記事を任意の場所に置きたい場合はcollectionsのnameからfieldまでをそれぞれ記述しなければならないので注意。  
 
-```yml
+```yaml
 
 collections:
   - name: "blog"
@@ -213,7 +213,8 @@ Netlify CMSの管理画面が表示されました！
 
 ![netlifycmstop](/images/netlifycmstop.png)
 
-ただ、今まで書いた記事のタイトルは表示されず(泣)
+ただ、今まで書いた記事のタイトルは表示されず(泣)  
+このスクショには写ってないですがテスト投稿の記事はちゃんとタイトルが表示されています。
 
 下書きを保存するWorkflowのページはこんな感じ。
 
@@ -225,7 +226,7 @@ new postをクリックして編集画面
 
 ![cmsedit2](/images/cmsedit2.png)
 
-画像のアップロードはトップページのMediaからか記事作成を時markdownからリッチテキスト形式に変えてアップロードできます。  
+画像のアップロードはトップページのMediaからか記事作成時markdownからリッチテキスト形式に変えてアップロードして記事に貼り付けることができます。  
 
 記事を公開するには編集画面右上の`Set Status`をDraftからReadyにしてPublish。
 
@@ -237,6 +238,7 @@ new postをクリックして編集画面
 
 ![drafttoready](/images/drafttoready.png)
 
-実際のブログでのプレビューを見るには編集画面の右上check for previewボタンを押してView Previewに切り替わったらそこからプレビューに飛びます。
+実際のブログでのプレビューを見るには編集画面の右上check for previewボタンを押してView Previewに切り替わったらそこからプレビューに飛びます。  
+たたし少し時間がかかる。
 
 
