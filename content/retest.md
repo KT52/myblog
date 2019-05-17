@@ -8,3 +8,4 @@ slug: retest
 # test
 
 test
+![aaa]({static}/images/cpu.jpg)
