@@ -123,24 +123,24 @@ editorial_workflowというモードを設定することで下書き保存が�
 
 #### collections
 
-* name（必須）    
+- name（必須）    
   コレクションのユニークキー。
-* label    
+- label    
   管理画面上のラベル。指定しない場合は上のnameが使用される。
-* folder（必須）    
+- folder（必須）    
   markdownファイルを配置しているフォルダーの場所を指定。通常は`content`。    
   Netlify CMS上で作成された記事はここに保存されます。カテゴリー等で分けてcontent以下にフォルダーを作成している場合は`content/folder名`。`content`にもcontent/folderにも.mdファイルが置いてある場合はそれぞれのコレクションを作成しなければならない。
-* create  
+- create  
   これよくわからないのでグーグル翻訳をそのまま載せときます。  
   フォルダコレクション専用です。 trueの場合、ユーザーはコレクション内に新しい項目を作成できます。デフォルトはfalse
-* slug  
+- slug  
     urlの最後の部分の設定と生成される.mdファイル名の設定。  
     デフォルトの{{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。  
   なので、`{{fields.slug}}`とすることでfieldsのslugを参照するようになります。   
-* identifier_field  
+- identifier_field  
   Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。  
     僕はタイトルを指定しているので各記事のタイトルが表示される。
-* fields  
+- fields  
   .mdファイルにおけるメタデータの設定。bodyは記事を書くフィールド。
   - label  
 管理画面上で表示される名前とメタデータの`Title:`などの部分。
@@ -193,6 +193,7 @@ STATIC_PATHS = ['images','static','admin'] #adminを追加
 ```
 
 を追加。  
+これでサイトurl/adminにアクセスできるようになる。  
 markdownファイルをcontentフォルダのさらに下に置いてある場合はSTATIC_PATHSにそのフォルダ名を追記する必要があるかも（未確認）。
 
 ## GitHubにpush
