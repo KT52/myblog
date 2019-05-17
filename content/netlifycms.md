@@ -1,8 +1,8 @@
 ---
-Title: Netlify+PelicanにNetlify CMSを追加してみる
-Date: '2019-05-16'
-Category: Pelican
-Tags: 'netlify,pelican'
+title: Netlify+PelicanのブログにNetlify CMSを追加する
+date: '2019-05-17'
+category: Pelican
+tags: 'pelican,netlify,python'
 slug: netlifycms
 ---
 ## はじめに
@@ -146,8 +146,13 @@ Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定�
 僕はタイトルを指定しているので各記事のタイトルが表示される。
 
 - fields  
-.mdファイルにおけるメタデータの設定。
+.mdファイルにおけるメタデータの設定。bodyは記事を書くフィールド。
   - label  
-管理画面上で表示される名前
-  - name  
-フィールドのユニークな識別子。メタデータの`Title:`の部分。
+管理画面上で表示される名前とメタデータの`Title:`などの部分。
+  - name（必須）  
+フィールドのユニークな識別子。
+  - widget  
+フィールドのタイプ。stringなら文字、dateなら日付を
+  - required: falseを指定すると必須項目ではないフィールドになる。
+
+
