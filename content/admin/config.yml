@@ -13,8 +13,8 @@ collections:
     name: "blog"
     folder: "content"
     create: true
-    slug: "{{slug}}"
-    identifier_field: Slug
+    slug: "{{fields.slug}}"
+    identifier_field: Title
     fields:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Publish Date", name: "Date", widget: "date",format: "YYYY-MM-DD"}
