@@ -171,10 +171,13 @@ collections:
 pelicanconf.pyに
 
 ```python
-#templatepages
+
+#template pages
 TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
-#static files
-pathSTATIC_PATHS = ['images','static','admin'] #adminを追加
+
+#static files path
+STATIC_PATHS = ['images','static','admin'] #adminを追加
+
 ```
 
 を追加。  これでサイトurl/adminにアクセスできるようになる。  markdownファイルをcontentフォルダのさらに下に置いてある場合はSTATIC_PATHSにそのフォルダ名を追記する必要があるかも（未確認）。
