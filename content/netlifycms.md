@@ -86,7 +86,7 @@ backend:
 publish_mode: editorial_workflow
 
 media_folder: "content/images"
-public_folder: "../../../images"
+public_folder: "/{static}/images"
 
 collections:
   - label: "Blog"
@@ -120,4 +120,9 @@ editorial_workflowというモードを設定することで下書き保存が�
 画像ファイル置き場の場所。  
 
 - public_folder  
-記事をアップロードした後に画像がアクセスされるパス。
+記事をアップロードした後に実際にアクセスされる画像ファイルのパス。  
+記事を書いてるとき画像のパスは、({static}/images/xxx.jpg)とか(../../../images/xxx.jpg)こんな感じに書きますよね。その部分をpublic_folderに指定します。
+
+#### collections
+
+
