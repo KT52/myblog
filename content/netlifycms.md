@@ -135,7 +135,7 @@ editorial_workflowというモードを設定することで下書き保存が�
   フォルダコレクション専用です。 trueの場合、ユーザーはコレクション内に新しい項目を作成できます。デフォルトはfalse
 * slug  
     urlの最後の部分の設定と生成される.mdファイル名の設定。  
-    {{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。  
+    デフォルトの{{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。  
   なので、`{{fields.slug}}`とすることでfieldsのslugを参照するようになります。   
 * identifier_field  
   Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。  
@@ -151,23 +151,23 @@ editorial_workflowというモードを設定することで下書き保存が�
   * required: false  
     必須項目ではないフィールドにする。  
 
-folderのところでも書きましたが、markdownファイルをcontentとcontent/categoryみたいに分けて保存していて、Netlify CMSで作成された記事を任意の場所に保存したい場合はcollectionsのnameからfieldまでをそれぞれ記述しなければならないので注意。  
+folderのところでも書きましたが、markdownファイルをcontentとcontent/categoryみたいに分けて保存していて、Netlify CMSで作成された記事を任意の場所に置きたい場合はcollectionsのnameからfieldまでをそれぞれ記述しなければならないので注意。  
 
 ```yml
-- name: "blog"
+
+collections:
+  - name: "blog"
     label: "Blog"
-    folder: "content"
- #contentフォルダ
+    folder: "content" #contentフォルダ
     create: true
     slug: "{{fields.slug}}"
     identifier_field: title
     fields:
       - {label: "Title", name: "title", widget: "string"}
       #省略
-- name: "python"
+  - name: "python"
     label: "python"
-    folder: "content/python"
- #content内のpythonフォルダー
+    folder: "content/python" #content内のpythonフォルダー
     create: true
     slug: "{{fields.slug}}"
     identifier_field: title
