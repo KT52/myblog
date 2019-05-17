@@ -84,7 +84,7 @@ backend:
 publish_mode: editorial_workflow
 
 media_folder: "content/images"
-public_folder: "/{static}/images"
+public_folder: "../../../images"
 
 collections:
   - name: "blog"
@@ -110,46 +110,46 @@ GitHubを使用している場合はrepoに使用するリポジトリとbranch�
 
 #### publish_mode: editorial_workflow
 
-editorial_workflowというモードを設定することで下書き保存が可能になります。\
+editorial_workflowというモードを設定することで下書き保存が可能になります。  
 これがないと記事を作成してセーブすると即座に公開されてしまう。
 
 #### media/public_folder
 
-* media_folder\
+* media_folder  
   画像ファイル置き場の場所。  
-* public_folder\
-  記事をアップロードした後に実際にアクセスされる画像ファイルのパス。\
+* public_folder  
+  記事をアップロードした後に実際にアクセスされる画像ファイルのパス。  
   記事を書いてるとき画像のパスは、({static}/images/xxx.jpg)とか(../../../images/xxx.jpg)こんな感じに書きますよね。その部分をpublic_folderに指定します。
 
 #### collections
 
-* name（必須）\
+* name（必須）  
   コレクションのユニークキー。
-* label\
+* label  
   管理画面上のラベル。指定しない場合は上のnameが使用される。
-* folder（必須）\
-  markdownファイルを配置しているフォルダーの場所を指定。通常は`content`。\
+* folder（必須）  
+  markdownファイルを配置しているフォルダーの場所を指定。通常は`content`。  
   Netlify CMS上で作成された記事はここに保存されます。カテゴリー等で分けてcontent以下にフォルダーを作成している場合は`content/folder名`。`content`にもcontent/folderにも.mdファイルが置いてある場合はそれぞれのコレクションを作成しなければならない。
-* create\
+* create  
   これよくわからないのでグーグル翻訳をそのまま載せときます。\
   フォルダコレクション専用です。 trueの場合、ユーザーはコレクション内に新しい項目を作成できます。デフォルトはfalse
-* slug\
-  urlの最後の部分の設定と生成される.mdファイル名の設定。\
-  {{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。\
-  なので、`{{fields.slug}}`とすることでfieldsのslugを参照するようになります。   
-* identifier_field\
-  Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。\
+* slug  
+  urlの最後の部分の設定と生成される.mdファイル名の設定。  
+  {{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。  
+なので、`{{fields.slug}}`とすることでfieldsのslugを参照するようになります。   
+* identifier_field  
+Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。  
   僕はタイトルを指定しているので各記事のタイトルが表示される。
-* fields\
-  .mdファイルにおけるメタデータの設定。bodyは記事を書くフィールド。
-  * label\
-    管理画面上で表示される名前とメタデータの`Title:`などの部分。
-  * name（必須）\
+* fields  
+.mdファイルにおけるメタデータの設定。bodyは記事を書くフィールド。
+  * label  
+管理画面上で表示される名前とメタデータの`Title:`などの部分。
+  * name（必須）  
     フィールドのユニークな識別子。
-  * widget\
-    フィールドのタイプ。stringなら文字、dateなら日付を
-  * required: false\
-    必須項目ではないフィールドにする。  
+  * widget  
+フィールドのタイプ。stringなら文字、dateなら日付を
+  * required: false  
+必須項目ではないフィールドにする。  
 
 folderのところでも書きましたが、markdownファイルをcontentとcontent/categoryみたいに分けて保存していて、Netlify CMSで作成された記事を任意の場所に保存したい場合はcollectionsのnameからfieldまでをそれぞれ記述しなければならないので注意。  
 
@@ -207,25 +207,25 @@ markdownファイルをcontentフォルダのさらに下に置いてある場�
 
 サイトurl/adminにアクセスすると、ログイン画面が表示されるのでログイン。
 
-![login](/{static}/images/login.png)
+![login](/images/login.png)
 
 Netlify CMSの管理画面が表示されました！
 
-![netlifycmstop](/{static}/images/netlifycmstop.png)
+![netlifycmstop](/images/netlifycmstop.png)
 
 ただ、今まで書いた記事のタイトルは表示されず(泣)
 
 下書きを保存するWorkflowのページはこんな感じ。
 
-![netlifycmsflow](/{static}/images/cmsflow.png)
+![netlifycmsflow](/images/cmsflow.png)
 
 new postをクリックして編集画面
 
-![cmsedit1](/{static}/images/cmsedit1.png)
+![cmsedit1](/images/cmsedit1.png)
 
-![cmsedit2](/{static}/images/cmsedit2.png)
+![cmsedit2](/images/cmsedit2.png)
 
 画像のアップロードはトップページのMediaからできます。
 
 
-![test](/{static}/images/dnsconf1.jpg)
+![test](/images/dnsconf1.jpg)
