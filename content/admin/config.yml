@@ -17,10 +17,10 @@ collections:
     identifier_field: Title
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Publish Date", name: "Date", widget: "date",format: "YYYY-MM-DD"}
-      - {label: "Modified", name: "Modified", widget: "string", required: false}
-      - {label: "Category", name: "Category", widget: "string"}
-      - {label: "Tags", name: "Tags", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "date",format: "YYYY-MM-DD"}
+      - {label: "Modified", name: "modified", widget: "string", required: false}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Related", name: "related_post", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
