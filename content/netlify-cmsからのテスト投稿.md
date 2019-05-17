@@ -1,9 +1,10 @@
 ---
-Title: Netlify CMSからのテスト投稿
-Date: '2019-05-16'
-Category: Misc
-Tags: 'netlify, pelican'
-Slug: netlifycmstest
+title: Netlify CMSからのテスト投稿
+date: '2019-05-16'
+modified: ''
+category: Misc
+tags: 'pelican,netlify'
+slug: netlifycmstest
 ---
 # test
 
