@@ -13,7 +13,7 @@ collections:
     name: "blog"
     folder: "content"
     create: true
-    slug: "{{fields.slug}}"
+    slug: "{{fields.Slug}}"
     identifier_field: Title
     fields:
       - {label: "Title", name: "Title", widget: "string"}
