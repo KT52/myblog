@@ -171,8 +171,8 @@ collections:
 pelicanconf.pyに
 
 ```python
-#template
-pagesTEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
+#templatepages
+TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
 #static files
 pathSTATIC_PATHS = ['images','static','admin'] #adminを追加
 ```
