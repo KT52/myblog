@@ -117,4 +117,7 @@ editorial_workflowというモードを設定することで下書き保存が�
 #### media/public_folder
 
 - media_folder  
-画像ファイル置き場の場所。
+画像ファイル置き場の場所。  
+
+- public_folder  
+記事をアップロードした後に画像がアクセスされるパス。
