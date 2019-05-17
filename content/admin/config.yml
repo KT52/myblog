@@ -9,8 +9,8 @@ media_folder: "content/images"
 public_folder: "/{static}/images"
 
 collections:
-  - label: "Blog"
-    name: "blog"
+  - name: "blog"
+    label: "Blog"
     folder: "content"
     create: true
     slug: "{{fields.slug}}"
