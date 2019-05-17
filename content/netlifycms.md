@@ -12,7 +12,7 @@ slug: netlifycms
 [Netlify CMS](https://www.netlifycms.org/){:target="_blank"}は静的サイトジェネレーターにWordpressのような管理画面を追加するオープンソースのコンテンツ管理システムです。    
 Wordpressのデータベースの代わりにGitHubやGitLabのリポジトリを利用して管理しているようです。  
 
-このブログは静的サイトジェネレーターのPelicanを利用していますがここにNetlify CMSを追加してみようと思います。
+このブログは静的サイトジェネレーターのPelicanを利用していますがここにNetlify CMSを追加してみようと思います。そしてこの記事はNetlify CMSから投稿しています。
 
 管理画面を表示するまでにする事は少なく、  
 
@@ -244,6 +244,8 @@ new postをクリックして編集画面
 
 ## おわりに
 
-することは認証してadminディレクトリにファイル作成してpelicanconf.pyを少し修正してGitHubにpushするだけで簡単なのですが、実際にはconfig.ymlファイルを修正してpushして、を何度も繰り返しています。
+することは認証してadminディレクトリにファイル作成してpelicanconf.pyを少し修正してGitHubにpushするだけで簡単なのですが、PelicanでNetlify CMSを利用する記事が全く無いのでpelicanの理解が浅いとpelicanconf.pyの編集をしないとサイトurl/adminが"page not found"でアクセスできないという壁にぶち当たります。  
+
+あと、config.ymlファイルを修正してpushして、を何度も繰り返してやっと記事を投稿できるようになったので、[config.ymlのドキュメント](https://www.netlifycms.org/docs/configuration-options/)をグーグル翻訳を使ってしっかり読んだほうが良いです。
 
 
