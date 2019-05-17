@@ -142,14 +142,14 @@ editorial_workflowというモードを設定することで下書き保存が�
     僕はタイトルを指定しているので各記事のタイトルが表示される。
 * fields  
   .mdファイルにおけるメタデータの設定。bodyは記事を書くフィールド。
-  * label  
-    管理画面上で表示される名前とメタデータの`Title:`などの部分。
-  * name（必須）  
-    フィールドのユニークな識別子。
-  * widget  
-    フィールドのタイプ。stringなら文字、dateなら日付を
-  * required: false  
-    必須項目ではないフィールドにする。  
+  - label  
+管理画面上で表示される名前とメタデータの`Title:`などの部分。
+  - name（必須）  
+フィールドのユニークな識別子。
+  - widget  
+フィールドのタイプ。stringなら文字、dateなら日付を
+  - required: false  
+必須項目ではないフィールドにする。  
 
 folderのところでも書きましたが、markdownファイルをcontentとcontent/categoryみたいに分けて保存していて、Netlify CMSで作成された記事を任意の場所に置きたい場合はcollectionsのnameからfieldまでをそれぞれ記述しなければならないので注意。  
 
