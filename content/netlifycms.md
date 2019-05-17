@@ -229,10 +229,14 @@ new postをクリックして編集画面
 
 記事を公開するには編集画面右上の`Set Status`をDraftからReadyにしてPublish。
 
-![setstatus](/{static}/images/setstatus.gif)
+![setstatus](/images/setstatus.gif)
 
 または、workflow画面で記事をReadyにドラッグアンドドロップしてpublish。
 
 
 
-![drafttoready](/{static}/images/drafttoready.png)
+![drafttoready](/images/drafttoready.png)
+
+実際のブログでのプレビューを見るには編集画面の右上check for previewボタンを押してView Previewに切り替わったらそこからプレビューに飛びます。
+
+
