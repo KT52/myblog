@@ -21,9 +21,10 @@ slug: netlifycms
 
 ## GitHub認証
 - - -
-最初にGitHubの右上にある自分のアイコンから`setting→Developer settingsOAth Apps`を選択して`Register a new application`をクリック。  
+最初にGitHubの右上にある自分のアイコンから`setting→Developer settings→OAth Apps`を選択して`Register a new application`をクリック。  
 すると下記の画面になるのでこんな感じに入力していきます。    
 ![gitoauth](/../../../images/gitoauth.jpg)
+
 Application nameは適当にHomepage URLはブログのURL、`Authorization call back URL`は`https://api.netlify.com/auth/done`と入力してRegister applicationをクリック。  
 するとClient IDと Client Secretが発行されるのでページはそのままでNetlifyのsite settingsに移動します。  
 
@@ -100,9 +101,11 @@ editorial_workflowというモードを設定することで下書き保存が�
 
 #### media/public_folder
 
-- media_folder    画像ファイル置き場の場所。
+- media_folder  
+画像ファイル置き場の場所。
 
-- public_folder      記事をアップロードした後に実際にアクセスされる画像ファイルのパス。      記事を書いてるとき画像のパスは、({static}/images/xxx.jpg)とか(../../../images/xxx.jpg)こんな感じに書きますよね。その部分をpublic_folderに指定します。ただ、({static}/images/xxx.jpg)だと上手くいかないっぽい。
+- public_folder  
+記事をアップロードした後に実際にアクセスされる画像ファイルのパス。      記事を書いてるとき画像のパスは、({static}/images/xxx.jpg)とか(../../../images/xxx.jpg)こんな感じに書きますよね。その部分をpublic_folderに指定します。ただ、({static}/images/xxx.jpg)だと上手くいかないっぽい。
 
 #### collections
 
@@ -122,14 +125,19 @@ urlの最後の部分の設定と生成される.mdファイル名の設定。
 Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。      僕はタイトルを指定しているので各記事のタイトルが表示される。
 - fields  
 .mdファイルにおけるメタデータの設定。bodyは記事を書くフィールド。
-    - label  管理画面上で表示される名前とメタデータの`Title:`などの部分。
-    - name（必須）  フィールドのユニークな識別子。
-    - widget  フィールドのタイプ。stringなら文字、dateなら日付を
-    - required: false  必須項目ではないフィールドにする。  
+    - label  
+管理画面上で表示される名前とメタデータの`Title:`などの部分。
+    - name（必須）  
+フィールドのユニークな識別子。
+    - widget  
+フィールドのタイプ。stringなら文字、dateなら日付を
+    - required: false  
+必須項目ではないフィールドにする。  
 
 folderのところでも書きましたが、markdownファイルをcontentとcontent/categoryみたいに分けて保存していて、Netlify CMSで作成された記事を任意の場所に置きたい場合はcollectionsのnameからfieldまでをそれぞれ記述しなければならないので注意。  
 
 ```yaml
+
 collections:  
   - name: "blog"
     label: "Blog"
@@ -149,6 +157,7 @@ collections:
     fields:      
       - {label: "Title", name: "title", widget: "string"}
 　　　#省略
+
 ```
 
 以上でconfig.ymlの説明終わりです。
@@ -159,8 +168,10 @@ collections:
 pelicanconf.pyに
 
 ```python
-#template pagesTEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
-#static files pathSTATIC_PATHS = ['images','static','admin'] #adminを追加
+#template
+pagesTEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
+#static files
+pathSTATIC_PATHS = ['images','static','admin'] #adminを追加
 ```
 
 を追加。  これでサイトurl/adminにアクセスできるようになる。  markdownファイルをcontentフォルダのさらに下に置いてある場合はSTATIC_PATHSにそのフォルダ名を追記する必要があるかも（未確認）。
@@ -173,11 +184,16 @@ pelicanconf.pyに
 - - -
 
 サイトurl/adminにアクセスすると、ログイン画面が表示されるのでログイン。
+
 ![login](/images/login.png)
+
 Netlify CMSの管理画面が表示されました！
+
 ![netlifycmstop](/images/netlifycmstop.png)
 
-ただ、すでに投稿済みのpelican→netlifyで作成した記事のタイトルは表示されず(泣)  確認するとフィールドが空なのでCMS上でタイトルを表示させるにはフィールドにメタデータを記入して再投稿する必要がありそう。  このスクショには写ってないですがNetlify CMSで作ったテスト投稿の記事はちゃんとタイトルが表示されています。
+ただ、すでに投稿済みのpelican→netlifyで作成した記事のタイトルは表示されず(泣)  
+確認するとフィールドが空なのでCMS上でタイトルを表示させるにはフィールドにメタデータを記入して再投稿する必要がありそう。  
+このスクショには写ってないですがNetlify CMSで作ったテスト投稿の記事はちゃんとタイトルが表示されています。  
 下書きを保存するWorkflowのページはこんな感じ。
 
 ![netlifycmsflow](/images/cmsflow.png)
@@ -196,10 +212,11 @@ new postをクリックして編集画面
 
 
 ![drafttoready](/images/drafttoready.png)
-実際のブログでのプレビューを見るには編集画面の右上check for previewボタンを押してView Preview
-に切り替わったらそこからプレビューに飛びます。  ただしView Preview
-に切り替わるまで少し時間がかかります。
+
+実際のブログでのプレビューを見るには編集画面の右上check for previewボタンを押してView Previewに切り替わったらそこからプレビューに飛びます。ただしView Previewに切り替わるまで少し時間がかかります。
+
 ## おわりに
+
 することは認証してadminディレクトリにファイル作成してpelicanconf.pyを少し修正してGitHubにpushするだけで簡単なのですが、PelicanでNetlify CMSを利用する記事が全く無く、pelicanの理解が浅いとpelicanconf.pyの編集をしないとサイトurl/adminが"page not found"でアクセスできないという壁にぶち当たります。  
 あと、config.ymlファイルを修正してpushして、を何度も繰り返してやっと記事を投稿できるようになったので、[config.ymlのドキュメント](https://www.netlifycms.org/docs/configuration-options/)をグーグル翻訳を使ってしっかり読んだほうが良いです。
 
