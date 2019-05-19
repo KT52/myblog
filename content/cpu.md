@@ -1,3 +1,10 @@
+---
+title: CPUの温度を下げる
+date: '2018-05-16'
+category: Misc
+tags: tips
+slug: cputemperature
+---
 Title: CPUの温度を下げる
 Date: 2018-05-16 12:00
 Tags: tips
