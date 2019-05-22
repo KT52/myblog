@@ -1,8 +1,10 @@
-Title: CPUの温度を下げる
-Date: 2018-05-16 12:00
-Tags: tips
-Slug: cputemperature
-
+---
+title: CPUの温度を下げる
+date: '2018-05-16'
+category: Misc
+tags: tips
+slug: cputemperature
+---
 ラップトップPCを長年使っていると通常使用中にCPU温度が購入時に比べて高くなったりします。しかし、PCを分解してホコリを取り除いたり、CPUのグリスを塗り替えたりすることができない場合はCPUの性能を下げることで温度を下げることが出来る。<br><br>
 やり方はコントロールパネル→システムとセキュリティ→電源オプション→プラン設定の変更→詳細な電源設定の変更→プロセッサの電源管理→最大のプロセッサの状態→電源に接続を99％以下に変更、最小のプロセッサの状態を99％以下に変更。<br>
 <a href="../../../images/cpu1.jpg" data-toggle="lightbox"><img src="../../../images/cpu1.jpg" width="200" alt="cpu1"></a>
