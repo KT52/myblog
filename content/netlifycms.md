@@ -1,7 +1,7 @@
 ---
 title: Netlify+PelicanのブログにNetlify CMSを追加する
 date: '2019-05-17'
-modified: ''
+modified: '2019-05-22'
 category: Pelican
 tags: 'pelican,netlify,python'
 slug: netlifycms
