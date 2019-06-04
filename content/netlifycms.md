@@ -1,6 +1,7 @@
 ---
 title: Netlify+PelicanのブログにNetlify CMSを追加する
 date: '2019-05-17'
+modified: '2019-05-22'
 category: Pelican
 tags: 'pelican,netlify,python'
 slug: netlifycms
@@ -127,7 +128,8 @@ urlの最後の部分の設定と生成される.mdファイル名の設定。
 - identifier_field  
 Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。      僕はタイトルを指定しているので各記事のタイトルが表示される。
 - fields  
-.mdファイルにおけるメタデータの設定。bodyは記事を書くフィールド。
+.mdファイルにおけるメタデータの設定。使用するメタデータは人それぞれ違うと思うのでそのまんまコピペしないように。  
+bodyは記事を書くフィールド。
     - label  
 管理画面上で表示される名前とメタデータの`Title:`などの部分。
     - name（必須）  
@@ -197,6 +199,9 @@ Netlify CMSの管理画面が表示されました！
 ただ、すでに投稿済みのpelican→netlifyで作成した記事のタイトルは表示されず(泣)  
 確認するとフィールドが空なのでCMS上でタイトルを表示させるにはフィールドにメタデータを記入して再投稿する必要がありそう。  
 このスクショには写ってないですがNetlify CMSで作ったテスト投稿の記事はちゃんとタイトルが表示されています。  
+
+（2019-05-22追記）CMSで作られた.mdファイルのメタデータと同じ"---"でメタデータを囲み、Titleをtitleみたいにfieldsのnameと同じ小文字にしたらCMSでもタイトルが表示されました。  
+
 下書きを保存するWorkflowのページはこんな感じ。
 
 ![netlifycmsflow](/images/cmsflow.png)
