@@ -97,48 +97,48 @@ collections:
 
 ```
 
-#### backend
+#### **backend**
 
 GitHubを使用している場合はrepoに使用するリポジトリとbranchを指定。
 
-#### publish_mode: editorial_workflow
+#### **publish_mode: editorial_workflow**
 
 editorial_workflowというモードを設定することで下書き保存が可能になります。     これがないと記事を作成してセーブすると即座に公開されてしまう。
 
-#### media/public_folder
+#### **media/public_folder**
 
-- media_folder  
+- **media_folder**  
 画像ファイル置き場の場所。
 
-- public_folder  
+- **public_folder**  
 記事をアップロードした後に実際にアクセスされる画像ファイルのパス。      記事を書いてるとき画像のパスは、({static}/images/xxx.jpg)とか(../../../images/xxx.jpg)こんな感じに書きますよね。その部分をpublic_folderに指定します。ただ、({static}/images/xxx.jpg)だと上手くいかないっぽい。
 
-#### collections
+#### **collections**
 
-- name（必須）  
+- **name**（必須）  
 コレクションのユニークキー。
-- label  
+- **label**  
 管理画面上のラベル。指定しない場合は上のnameが使用される。
-- folder（必須）  
+- **folder**（必須）  
 markdownファイルを配置しているフォルダーの場所を指定。通常は`content`。      Netlify CMS上で作成された記事はここに保存されます。カテゴリー等で分けてcontent以下にフォルダーを作成している場合は`content/folder名`。`content`にもcontent/folderにも.mdファイルが置いてある場合はそれぞれのコレクションを作成しなければならない。
-- create  
+- **create**  
 これよくわからないのでグーグル翻訳をそのまま載せときます。    フォルダコレクション専用です。 trueの場合、ユーザーはコレクション内に新しい項目を作成できます。デフォルトはfalse
-- slug  
+- **slug**  
 urlの最後の部分の設定と生成される.mdファイル名の設定。  
 デフォルトの{{slug}}と指定すると、Netlify CMSでは後述するfieldのtitleを参照します。  なので日本語ブログだとurlが日本語タイトルをローマ字化したようなurlになり、ファイルも日本語.mdになってしまいます。  
 `{{fields.slug}}`とすることでfieldsのslugを参照するようになります。
-- identifier_field  
+- **identifier_field**  
 Netlify CMSの管理画面上の識別子。fieldのstring値の中から指定する。      僕はタイトルを指定しているので各記事のタイトルが表示される。
-- fields  
+- **fields**  
 .mdファイルにおけるメタデータの設定。使用するメタデータは人それぞれ違うと思うのでそのまんまコピペしないように。  
 bodyは記事を書くフィールド。
-    - label  
+    - **label**  
 管理画面上で表示される名前とメタデータの`Title:`などの部分。
-    - name（必須）  
+    - **name**（必須）  
 フィールドのユニークな識別子。
-    - widget  
+    - **widget**  
 フィールドのタイプ。stringなら文字、dateなら日付を
-    - required: false  
+    - **required: false**  
 必須項目ではないフィールドにする。  
 
 folderのところでも書きましたが、markdownファイルをcontentとcontent/categoryみたいに分けて保存していて、Netlify CMSで作成された記事を任意の場所に置きたい場合はcollectionsのnameからfieldまでをそれぞれ記述しなければならないので注意。  
