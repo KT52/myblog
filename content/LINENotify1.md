@@ -1,10 +1,11 @@
+---
 title: PythonでLINE Notifyに通知を送る
 date: 2018-11-30
 category: Python
 tags: python
 slug: linenotify
 related_posts: linescraping, herokulinenotify
-
+---
 ## LINE Notifyとは？
 
 LINE Notifyのヘルプによると、  

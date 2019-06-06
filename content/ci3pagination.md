@@ -1,9 +1,10 @@
-Title: CodeIgniterのページネーションクラスとGETパラメータの受け渡し
-Date: 2019-02-11
-Category: Misc
-Tags: php,codeigniter
-Slug: ci3pagination
-
+---
+title: CodeIgniterのページネーションクラスとGETパラメータの受け渡し
+date: 2019-02-11
+category: Misc
+tags: php,codeigniter
+slug: ci3pagination
+---
 CodeIgniterでpaginationのサンプルを紹介するサイトはいっぱいあるけど、GETパラメータの受け渡しをしたページでページネーションを実装するサンプルが少なかったしうまく行かなかったので、自分のやり方を一例として紹介します。
 通常だと`yoursite.com/class/function/ページ` と表示されるのを `yoursite.com/class/function?q=ホニャララ&per_page=ページ`みたいなURLでページネーションを実装します。<br>
 環境はPHP7.1 CodeIgniter Version 3.1.0　MariaDB　10.1.33

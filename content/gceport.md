@@ -1,9 +1,9 @@
 ---
-Title: GCEでSSHのポート番号を変更する
-Date: 2019-03-19
-Category: GCP
-Tags: vps,gce
-Slug: gceport
+title: GCEでSSHのポート番号を変更する
+date: 2019-03-19
+category: GCP
+tags: vps,gce
+slug: gceport
 related_posts: gcessh
 ---
 

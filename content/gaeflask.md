@@ -1,9 +1,9 @@
 ---
-Title: Google App EngineでFlaskを使う
-Date: 2018-05-17 21:00
-Category: GAE
-Tags: Python,GAE
-Slug: gaeflask
+title: Google App EngineでFlaskを使う
+date: 2018-05-17 21:00
+category: GAE
+tags: Python,GAE
+slug: gaeflask
 ---
 
 Google App EngineでFlaskを使う時のチュートリアル。  

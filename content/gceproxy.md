@@ -1,9 +1,9 @@
 ---
-Title: GCEでBasic認証付きのプロキシサーバーを立てる
-Date: 2019-04-21
-Category: GCP
-Tags: vps,gce
-Slug: gceproxy
+title: GCEでBasic認証付きのプロキシサーバーを立てる
+date: 2019-04-21
+category: GCP
+tags: vps,gce
+slug: gceproxy
 related_posts: gceport
 ---
 

@@ -1,9 +1,9 @@
 ---
-Title: Pythonでスクレイピングした情報をLINE Notifyで通知する
-Date: 2018-12-02
-Category: Python
-Tags: python
-Slug: linescraping
+title: Pythonでスクレイピングした情報をLINE Notifyで通知する
+date: 2018-12-02
+category: Python
+tags: python
+slug: linescraping
 related_posts: linenotify, herokulinenotify
 ---
 

@@ -1,9 +1,9 @@
 ---
-Title: GCPのデータストアにcsvのデータを一括で登録する2
-Date: 2018-08-15
-Category: GAE
-Tags: Python,GAE
-Slug: datastorecsv2
+title: GCPのデータストアにcsvのデータを一括で登録する2
+date: 2018-08-15
+category: GAE
+tags: Python,GAE
+slug: datastorecsv2
 ---
 
 今回はGoogle Cloud Platform (GCP)のデータストアにbulkloaderを使わずにGoogle App Engine（GAE)経由でcsvファイルを一括でアップロードします。

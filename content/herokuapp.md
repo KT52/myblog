@@ -1,9 +1,9 @@
 ---
-Title: Herokuを使ってスクレイピングした情報をLINE Notifyで通知する
-Date: 2018-12-05
-Category: Python
-Tags: python, heroku
-Slug: herokulinenotify
+title: Herokuを使ってスクレイピングした情報をLINE Notifyで通知する
+date: 2018-12-05
+category: Python
+tags: python, heroku
+slug: herokulinenotify
 related_posts: linenotify, linescraping
 ---
 

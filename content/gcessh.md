@@ -1,9 +1,9 @@
 ---
-Title: GCEでSSH認証鍵をPuTTYgenで作成してターミナルソフトで接続する
-Date: 2019-03-08
-Category: GCP
-Tags: vps,gce
-Slug: gcessh
+title: GCEでSSH認証鍵をPuTTYgenで作成してターミナルソフトで接続する
+date: 2019-03-08
+category: GCP
+tags: vps,gce
+slug: gcessh
 related_posts: gceport
 ---
 

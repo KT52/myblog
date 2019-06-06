@@ -1,9 +1,9 @@
 ---
-Title: CentOS7・ApacheでFlaskを動かす
-Date: 2019-02-25
-Category: Python
-Tags: python,flask,vps
-Slug: apacheflask
+title: CentOS7・ApacheでFlaskを動かす
+date: 2019-02-25
+category: Python
+tags: python,flask,vps
+slug: apacheflask
 ---
 
 先月下旬にVPS環境でCentOS7にApache、PHP、MariaDBを入れて動かしてみたLinux初心者が今度はFlaskを入れて動かしてみました。
