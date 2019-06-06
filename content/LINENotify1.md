@@ -6,7 +6,6 @@ Tags: python
 Slug: linenotify
 related_posts: linescraping, herokulinenotify
 ---
-
 ## LINE Notifyとは？
 
 LINE Notifyのヘルプによると、  
