@@ -1,8 +1,10 @@
+---
 Title: Python+SQLiteのlike句で％を使う場合のプレースホルダの書き方
 Date: 2018-07-06
 Category: Python
 Tags: Python,SQLite
 Slug: pythonsqlite
+---
 
 Python（+Flask）+SQLiteでパターンマッチングしたものを抽出するときに次のようなクエリを実行すると、<br>
 ```python

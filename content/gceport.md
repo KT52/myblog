@@ -1,9 +1,11 @@
+---
 Title: GCEでSSHのポート番号を変更する
 Date: 2019-03-19
 Category: GCP
 Tags: vps,gce
 Slug: gceport
 related_posts: gcessh
+---
 
 Google Compute Engine(GCE)でSSH接続のポート番号がデフォルトの22番だと不正アクセスを試みようとするログがこんな感じでいっぱい残っているので、ポート番号の変更をしてみます。<br>
 
