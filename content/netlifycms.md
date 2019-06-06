@@ -1,9 +1,9 @@
 ---
 title: Netlify+PelicanのブログにNetlify CMSを追加する
-date: '2019-05-17'
-modified: '2019-05-22'
+date: 2019-05-17
+modified: 2019-05-22
 category: Pelican
-tags: 'pelican,netlify,python'
+tags: pelican,netlify,python
 slug: netlifycms
 ---
 ## はじめに
@@ -11,7 +11,8 @@ slug: netlifycms
 [Netlify CMS](https://www.netlifycms.org/){:target="_blank"}は静的サイトジェネレーターにWordpressのような管理画面を追加するオープンソースのコンテンツ管理システムです。  
 Wordpressのデータベースの代わりにGitHubやGitLabのリポジトリを利用して管理しているようです。  
 このブログは静的サイトジェネレーターのPelicanを利用していますがここにNetlify CMSを追加してみようと思います。  
-そしてこの記事はNetlify CMSから投稿しています。  
+そしてこの記事はNetlify CMSから投稿しています。
+  
 
 管理画面を表示するまでにする事は少なく、  
 
@@ -19,7 +20,8 @@ Wordpressのデータベースの代わりにGitHubやGitLabのリポジトリ�
 2. Netlifyの設定
 3. content内にadminディレクトリを作って2つのファイルを置く
 4. pelicanconf.pyの編集
-5. GitHubにpush  
+5. GitHubにpush
+  
 
 これだけです。
 
@@ -221,7 +223,9 @@ new postをクリックして編集画面
 
 ![drafttoready](/images/drafttoready.png)
 
-実際のブログでのプレビューを見るには編集画面の右上check for previewボタンを押してView Previewに切り替わったらそこからプレビューに飛びます。ただしView Previewに切り替わるまで少し時間がかかります。
+実際のブログでのプレビューを見るには編集画面の右上check for previewボタンを押してView Preview
+に切り替わったらそこからプレビューに飛びます。ただしView Preview
+に切り替わるまで少し時間がかかります。
 
 ## おわりに
 
