@@ -136,7 +136,7 @@ location / {
 # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 
     location ~ \.php$ {
-        root           /var/www/html/showyangels/public; #ドキュメントルートの変更
+        root           /var/www/html/プロジェクト名/public; #ドキュメントルートの変更
         fastcgi_pass   127.0.0.1:9000;
         fastcgi_index  index.php;
         fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name; #変更
