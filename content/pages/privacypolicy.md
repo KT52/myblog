@@ -1,6 +1,7 @@
 Title: Privacy Policy
 URL:
 save_as: privacypolicy.html
+slug:privacypolicy
 
 ### アクセス解析ツールについて
 
