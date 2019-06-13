@@ -80,14 +80,15 @@
                             title="Share by Email" target="_blank"><img
                             src="{{ SITEURL }}/theme/images/icons/mail-s.png"></a></span>
                 </div>-->
-                <div>{% if article.related_posts %}Related Posts:
+                {% if article.related_posts %}<section class="well" id="related-posts">Related Posts:
                 <ul>
                     {% for related_post in article.related_posts %}
                     <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
                     {% endfor %}
                 </ul>
+                </section>
                 {% endif %}
-                </div>
+                
 
             </div>
             {% if DISQUS_SITENAME %}
