@@ -1,7 +1,7 @@
 ---
 title: GCPのデータストアにcsvのデータを一括で登録する2
 date: 2018-08-15
-category: GAE
+category: GCP
 tags: Python,GAE
 slug: datastorecsv2
 ---

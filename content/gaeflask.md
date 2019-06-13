@@ -1,7 +1,7 @@
 ---
 title: Google App EngineでFlaskを使う
 date: 2018-05-17 21:00
-category: GAE
+category: GCP
 tags: Python,GAE
 slug: gaeflask
 ---
