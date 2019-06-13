@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 
 AUTHOR = u'AIMLESS BLOG'
 SITENAME = u'Aimless Blog'
-#SITEURL = 'www.ravness.com'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'www.ravness.com'
+#SITEURL = 'http://localhost:8000'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 ABOUT_ME = u'備忘録的ブログ'
 AVATAR = ''
