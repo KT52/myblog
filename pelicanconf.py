@@ -3,13 +3,14 @@
 from __future__ import unicode_literals
 
 
-AUTHOR = u'kt'
+AUTHOR = u'AIMLESS BLOG'
 SITENAME = u'Aimless Blog'
-SITEURL = 'www.ravness.com'
-#SITEURL = 'http://localhost:8000'
+#SITEURL = 'www.ravness.com'
+SITEURL = 'http://localhost:8000'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 ABOUT_ME = u'備忘録的ブログ'
 AVATAR = ''
+SIDEBAR_DIGEST = '備忘録的ブログ'
 
 # Localeを記入することでUnicodeDecodeErrorを回避
 LOCALE = ('usa', 'jpn',      # On Windows
@@ -39,12 +40,12 @@ FEED_ALL_RSS = 'feeds/all.rss.xml'
 
 DISPLAY_TAGS_ON_SIDEBAR_LIMIT = 5
 DISPLAY_LINKS_ON_SIDEBAR_LIMIT = 5
-DISPLAY_BREADCRUMBS = True
+#DISPLAY_BREADCRUMBS = True
 DISPLAY_CATEGORIES_ON_MENU = True
-DISPLAY_CATEGORY_IN_BREADCRUMBS = True
+#DISPLAY_CATEGORY_IN_BREADCRUMBS = True
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
 DISPLAY_ARCHIVE_ON_SIDEBAR = True
-BOOTSTRAP_NAVBAR_INVERSE = True
+#BOOTSTRAP_NAVBAR_INVERSE = True
 DISPLAY_TAGS_ON_SIDEBAR = True
 TAG_CLOUD_MAX_ITEMS = 10
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
@@ -64,19 +65,19 @@ PLUGINS = ['i18n_subsites', "tag_cloud", "related_posts"]
          ('You can modify those links in your config file', '#'),)"""
 
 # Social widget
-SOCIAL = (('tumblr', 'https://www.tumblr.com/blog/lollapal00za'),
+SOCIAL = (('tumblr', 'https://tumblr.com/blog/lollapal00za'),
           ('github', 'https://github.com/Squigly77/myblog')
           )
 
-DEFAULT_PAGINATION = 5
+#DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
 # Theme path
-THEME = './themes/pelican-bootstrap3'
-BOOTSTRAP_THEME = 'yeti'
-#THEME = 'themes/pelican-blue'
+#THEME = './themes/pelican-bootstrap3'
+#BOOTSTRAP_THEME = 'yeti'
+THEME = 'themes/pelican-blue'
 
 #template pages
 TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
@@ -91,7 +92,7 @@ EXTRA_PATH_METADATA = {
 #custom css
 CUSTOM_CSS = 'static/css/ekko-lightbox.css'
 CUSTOM_JS = 'static/js/ekko-lightbox.min.js'
-#CUSTOM_CSS = 'static/css/my.css'
+CUSTOM_CSS = 'static/css/my.css'
 
 GOOGLE_ANALYTICS = 'UA-67464867-3'
 
@@ -105,7 +106,7 @@ DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
 SITEMAP_SAVE_AS = 'sitemap.xml'
 #SITEMAP_SAVE_AS = 'sitemap.html'
 # pelican-blue setting
-#DISPLAY_PAGES_ON_MENU = False
-#DEFAULT_PAGINATION = 10
-#MENUITEMS = (('Blog', SITEURL),)
+DISPLAY_PAGES_ON_MENU = False
+DEFAULT_PAGINATION = 10
+MENUITEMS = (('Home', SITEURL),)
 #PAGE_URL = 'pages/{slug}/'

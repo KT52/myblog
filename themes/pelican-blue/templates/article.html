@@ -35,18 +35,12 @@
                     {% endif %}
                 </div>
 
-                <div class="entry-social">
+            <!--   <div class="entry-social">
                     <span class="twitter"><a target="_blank" rel="nofollow"
                                              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"
                                              title="Twitter"
                                              href="https://twitter.com/share?url={{ SITEURL }}/{{ article.url }}&text={{ article.title|striptags }}&via={{ TWITTER_USERNAME }}"><img
                             src="{{ SITEURL }}/theme/images/icons/twitter-s.png"></a></span>
-
-                  <!--  <span class="gplus"><a target="_blank" title="Google +"
-                                           href="https://plus.google.com/share?url={{ SITEURL }}/{{ article.url }}&hl=fr"
-                                           rel="nofollow"
-                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
-                            src="{{ SITEURL }}/theme/images/icons/google-s.png"></a></span>-->
 
                     <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow"
                                               onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"
@@ -55,8 +49,8 @@
                     <a href="https://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="touch"
                         title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
                             alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
-                   <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="en"></a>
-                   <!--  <a target="_blank" title="Linkedin"
+                   <span><a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ja"></a></span>
+                    <a target="_blank" title="Linkedin"
                        href="https://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}/{{ article.url }}&title={{ article.title|striptags }}"
                        rel="nofollow"
                        onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
@@ -65,8 +59,17 @@
                     <!--<span class="mail"><a
                             href="mailto:?subject={{ article.title|striptags }}&amp;body=Viens découvrir un article à propos de [{{ article.title|striptags }}] sur le site de {{ AUTHOR }}. {{ SITEURL }}/{{ article.url }}"
                             title="Share by Email" target="_blank"><img
-                            src="{{ SITEURL }}/theme/images/icons/mail-s.png"></a></span>-->
+                            src="{{ SITEURL }}/theme/images/icons/mail-s.png"></a></span>
+                </div>-->
+                <div>{% if article.related_posts %}Related Posts:
+                <ul>
+                    {% for related_post in article.related_posts %}
+                    <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
                 </div>
+
             </div>
             {% if DISQUS_SITENAME %}
                 <div class="comments">
