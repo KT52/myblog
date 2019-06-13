@@ -96,6 +96,7 @@ article > header {
   border-radius: 5px 5px;
 }
 
+blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}
 
 /* Links */;
 a  { color:#1DAEDF; text-decoration:none; }
