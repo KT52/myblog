@@ -28,7 +28,7 @@ MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
 
 TIMEZONE = 'Asia/Tokyo'
 
-DEFAULT_LANG = u'Japanese'
+DEFAULT_LANG = u'ja'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
