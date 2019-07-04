@@ -1,9 +1,11 @@
+---
 title: FlaskのページネーションはFlask-paginateを使うと簡単に実装できる
 date: 2019-07-03
 category: Python
 tags: python,flask
 slug: flaskpaginate
 related_posts: ci3pagination,laravelpagination
+---
 
 [Flask Paginate](https://flask-paginate.readthedocs.io/en/latest/){:target="_blank"}はシンプルなFlaskのページネーション拡張で、
 cssフレームワークのBootstrapとfoundationに対応しています。
@@ -43,7 +45,7 @@ app = Flask(__name__)
 @app.route('/')
 #省略
 
-@app.route('/pagination', methods=['GET'])
+@app.route('/pagination', methods=['POST','GET'])
 def pic_view():
     if request.method == 'GET':
         name = request.args.get('name')
