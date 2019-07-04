@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'AIMLESS BLOG'
 SITENAME = u'Aimless Blog'
-SITEURL = 'https://www.ravness.com'
+SITEURL = ''
 #SITEURL = 'http://localhost:8000'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 ABOUT_ME = u'備忘録的ブログ'
@@ -92,10 +92,6 @@ EXTRA_PATH_METADATA = {
 #custom css
 CUSTOM_CSS = 'static/css/ekko-lightbox.css'
 CUSTOM_JS = 'static/js/ekko-lightbox.min.js'
-
-GOOGLE_ANALYTICS = 'UA-67464867-3'
-
-ADDTHIS_PROFILE = 'ra-5b3b6c6367750cca'
 
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
 SITEMAP_SAVE_AS = 'sitemap.xml'
