@@ -21,7 +21,7 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 #DISQUS_SITENAME = ""
-GOOGLE_ANALYTICS = "UA-67464867-3"
+GOOGLE_ANALYTICS = ""
 ADDTHIS_PROFILE = 'ra-5b3b6c6367750cca'
 
 MENUITEMS = (('Home', SITEURL),('Tags', '/tags.html'),)
