@@ -100,6 +100,6 @@ SITEMAP_SAVE_AS = 'sitemap.xml'
 
 DISPLAY_PAGES_ON_MENU = False
 DEFAULT_PAGINATION = 10
-MENUITEMS = (('Home', SITEURL),('Tags', '/tags.html'),)
+
 
 #LOAD_CONTENT_CACHE = False
