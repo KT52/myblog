@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'AIMLESS BLOG'
 SITENAME = u'Aimless Blog'
-SITEURL = ''
+SITEURL = 'https://www.ravness.com'
 #SITEURL = 'http://localhost:8000'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 ABOUT_ME = u'備忘録的ブログ'
@@ -100,6 +100,6 @@ SITEMAP_SAVE_AS = 'sitemap.xml'
 
 DISPLAY_PAGES_ON_MENU = False
 DEFAULT_PAGINATION = 10
-
+MENUITEMS = (('Home', SITEURL),('Tags', '/tags.html'),)
 
 #LOAD_CONTENT_CACHE = False
