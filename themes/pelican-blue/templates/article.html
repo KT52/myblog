@@ -1,12 +1,5 @@
 {% extends "base.html" %}
 {% block head %}
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-9772961045289102",
-          enable_page_level_ads: true
-     });
-</script>
     {{ super() }}
     <meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
     <meta name="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
@@ -83,13 +76,13 @@
                             title="Share by Email" target="_blank"><img
                             src="{{ SITEURL }}/theme/images/icons/mail-s.png"></a></span>
                 </div>-->
-                {% if article.related_posts %}<section class="well" id="related-posts">Related Posts:
+                {% if article.related_posts %}<p><section class="well" id="related-posts">Related Posts:
                 <ul>
                     {% for related_post in article.related_posts %}
                     <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
                     {% endfor %}
                 </ul>
-                </section>
+                </section></p>
                 {% endif %}
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- test1 -->
