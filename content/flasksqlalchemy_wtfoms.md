@@ -124,6 +124,7 @@ get()でプライマリーキーを元に呼び出すことができる。
 <br>
 
 ## Update
+---
 
 ```
 >>> from test import User,db
