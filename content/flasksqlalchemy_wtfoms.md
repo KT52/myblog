@@ -81,7 +81,7 @@ pythonシェル上でテーブル作成。仮想環境で、
 >>> db.session.commit()
 ```
 
-db.session.add()でセッションに追加してcommit()でセッションをコミットするという流れでデータベースに挿入される。updateも同じ。<br>
+db.session.add()でセッションに追加してcommit()でセッションをコミットするという流れでデータベースに挿入される。<br>
 
 ## Query
 ---
@@ -122,5 +122,17 @@ get()でプライマリーキーを元に呼び出すことができる。
 >>> db.session.commit()
 ```
 <br>
+
+## Update
+
+```
+>>> from test import User,db
+>>> r = User.query.get(2)
+>>> r.username = 'Kubo'
+>>> db.session.commit()
+#　確認
+>>> User.query.all()
+[<User 1,'Yamada','Fighter'>, <User 2,'Kubo','Priest'>]
+```
 
 Flask-SQLAlchemyの基本がわかったので次回はFlask-WTFでフォームを作って、insert、update、delete機能をつけたページから操作してみようと思います。
