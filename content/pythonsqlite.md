@@ -24,12 +24,12 @@ sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current sta
 <br>
 ####解決法
 
-~~プレースホルダ~~変数側に％を記述する。
+変数側に％を記述する。
 ```python
 g.db.execute("SELECT * FROM school WHERE name like ?",('%'+word+'%',))
 ```
 
-<br>あと、よくあるミスとして~~プレースホルダ~~変数の項目が1個のときもexecuteの第2引数をタプルにしないといけないのを忘れるのも注意。   
+<br>あと、よくあるミスとして変数の項目が1個のときもexecuteの第2引数をタプルにしないといけないのを忘れるのも注意。   
 <br>[pythonドキュメントより](https://docs.python.jp/3/library/sqlite3.html){:target="_blank"}<br>
 > ? を変数の値を使いたいところに埋めておきます。その上で、値のタプルをカーソルの execute() メソッドの第2引数として引き渡します。
 
