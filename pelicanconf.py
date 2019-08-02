@@ -40,7 +40,7 @@ FEED_ALL_RSS = 'feeds/all.rss.xml'
 
 DISPLAY_LINKS_ON_SIDEBAR_LIMIT = 5
 DISPLAY_BREADCRUMBS = True
-DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_CATEGORY_IN_BREADCRUMBS = True
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
@@ -63,8 +63,6 @@ PLUGINS = ['i18n_subsites', "tag_cloud", "related_posts"]
 SOCIAL = (('tumblr', 'https://tumblr.com/blog/lollapal00za'),
           ('github', 'https://github.com/Squigly77/myblog')
           )
-
-#DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
@@ -95,7 +93,7 @@ SITEMAP_SAVE_AS = 'sitemap.xml'
 
 DISPLAY_PAGES_ON_MENU = False
 DEFAULT_PAGINATION = 10
-MENUITEMS = (('Home', SITEURL),('Tags', '/tags.html'),)
+MENUITEMS = (('Home', SITEURL), ('Tags', '/tags.html'), ('Laravel', '/category/Laravel.html'), ('Python', '/category/Python.html'),('GCP', '/category/GCP.html'), ('Pelican', '/category/Pelican.html'), ('Misc', '/category/Misc.html'))
 
 GOOGLE_ANALYTICS = "UA-67464867-3"
 
