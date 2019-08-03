@@ -52,13 +52,6 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['i18n_subsites', "tag_cloud", "related_posts"]
 
-
-# Blogroll
-"""LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)"""
-
 # Social widget
 SOCIAL = (('tumblr', 'https://tumblr.com/blog/lollapal00za'),
           ('github', 'https://github.com/Squigly77/myblog')
@@ -68,8 +61,6 @@ SOCIAL = (('tumblr', 'https://tumblr.com/blog/lollapal00za'),
 RELATIVE_URLS = True
 
 # Theme path
-#THEME = './themes/pelican-bootstrap3'
-#BOOTSTRAP_THEME = 'yeti'
 THEME = 'themes/pelican-blue'
 
 #template pages
@@ -99,8 +90,3 @@ GOOGLE_ANALYTICS = "UA-67464867-3"
 
 #LOAD_CONTENT_CACHE = False
 
-#DISPLAY_ARCHIVE_ON_SIDEBAR = True
-#BOOTSTRAP_NAVBAR_INVERSE = True
-#DISPLAY_TAGS_ON_SIDEBAR = True
-#TAG_CLOUD_MAX_ITEMS = 10
-#DISPLAY_TAGS_ON_SIDEBAR_LIMIT = 5
