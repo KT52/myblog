@@ -6,15 +6,18 @@ Slug:　pelicangae
 
 
 ## PelicanをGAEで使う
+---
 
 Google App Engine（以下GAE）は静的サイトもホスティングできるので、Pythonの静的サイトジェネレーターPelicanを使ったブログサイトを作ってみた。<br>
 なお、GAEの利用法（Google Cloud SDKとか)は省きます。Pelicanの使用法は[前に書いた記事](https://www.ravness.com/2018/03/pelicangithub/)を参照してください。
 
-### GAEの新しいプロジェクトを作成する
+## GAEの新しいプロジェクトを作成する
+---
 
 ここではプロジェクト名を"myblog"とします。
 
-### プロジェクトのディレクトリにひな型を作成
+## プロジェクトのディレクトリにひな型を作成
+---
 
 プロジェクト"myblog"のローカルディレクトリにpelicanの`pelican-quickstart`コマンドでひな型を作成。ディレクトリはこんな構造になっている。  
 
@@ -28,7 +31,8 @@ myblog/
 
   他にもファイルがプロジェクトのディレクトリにありますが、ブログ作成に最低限必要なのはこれだけ。<br>
 
-### app.yamlの設定
+## app.yamlの設定
+---
 
 ```yaml
 runtime: python27
@@ -45,15 +49,18 @@ handlers:
 
 ```
 
-### 記事を書いてジェネレイト
+## 記事を書いてジェネレイト
+---
 
 contentディレクトリに書いた記事を保存したら、`pelican content`で記事をジェネレイト。
 
-### ローカルサーバーで確認
+## ローカルサーバーで確認
+---
 
 `dev_appserver.py .`でサーバーを立ち上げたら、ブラウザでlocalhost:8080にアクセス。ブログが表示されたら成功。<br>
 
-### デプロイ
+## デプロイ
+---
 
 デプロイするのはoutputディレクトリだけでいいので、app.yamlでアップロードしないディレクトリを記述
 ```
@@ -63,11 +70,13 @@ skip_files:
 - plugins/
 ```
 
-### サイトにアクセス
+## サイトにアクセス
+---
 
 デプロイしたら`https://プロジェクト名.appspot.comにアクセス`  <br>
 
-### 補足
+## 補足
+---
 
 `pelicanconf.py`にURLルールをセッティングをしている場合は`app.yaml`にindex.htmlの場所とアップロードを追記する必要があります。
 ```
@@ -102,7 +111,8 @@ MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
   static_dir: output
 ```
 
-### GAEを無料で運用するための設定
+## GAEを無料で運用するための設定
+---
 <br>
 GAEはスタンダード環境での無料枠が大きいので月間数万PVくらいまでなら無料枠で運営できる…はず。  
 しかし何も設定しないとアクセス過多でインスタンスが複数立ち上がって無料で運用することができなくなる可能性があるので`app.yaml`でこれを制御します。  
@@ -117,7 +127,8 @@ automatic_scaling:
 ```
 インスタンスは一番性能が低いが28インスタンス時間が無料のf1-micro、`max_idle_instances: 1`でidle状態にあるインスタンスの最大値を1にして複数インスタンスが起動しないようにする。<br><br>
 
-### 参考サイト
+## 参考サイト
+---
 [Google App Engine で静的ウェブサイトをホストする](https://cloud.google.com/appengine/docs/standard/php/getting-started/hosting-a-static-website?hl=ja){:target="_blank"}<br>
 [Pelican](http://docs.getpelican.com/){:target="_blank"}<br>
 [Pelican Hosting on AppEngine](http://www.craigjperry.com/pelican-hosting-on-appengine.html){:target="_blank"}<br>
