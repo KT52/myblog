@@ -3,25 +3,32 @@ Date: 2018-03-30 12:00
 Category:	Pelican
 Tags: Python,GitHub,Pelican
 Slug:　pelicangithub
+modified: 2019-08-04
 
 今更ながら静的サイトジェネレーターというものの存在を知って、GitHub Pagesに[Pelican](http://docs.getpelican.com/en/stable/){:target="_blank"}を使ってブログを実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。<br><br>
 
-### GitHubに登録
+## GitHubに登録
+---
+
 Gitが使えるという前提で進めていきます。  
 まずは[GitHub](https://github.com/){:target="_blank"}でアカウントを作成。<br><br>
 
-### レポジトリを作成
+## レポジトリを作成
+---
+
 `Repository name`に`ユーザーネーム.github.io`と打ち込んで`Create Repository`をクリックして新規作成。  
 `Initialize this repository with a README`にチェックを入れるとREADME.mdが作られる。 <br><br> 
 
-###  ローカルに環境を構築
+##  ローカルに環境を構築
+---
 
 ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。  
 Markdown形式で書く場合はMarkdownもインストール。  
 `pip install pelican Markdown`  
 <br>
 
-###  pelican-quickstartでブログのひな型を作成
+##  pelican-quickstartでブログのひな型を作成
+---
 
 `pelican-quickstart`とコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる。  
 ```
@@ -62,7 +69,8 @@ username.github.io/
 </font>
 これでディレクトリ"username.github.io"内でpelicanコマンドが使えるようになります。<br><br>
 
-### ブログの記事を書く
+## ブログの記事を書く
+---
 
 contentディレクトリ内にMarkdown形式で記事を書く。  
 最初にメタデータを入れる。TitleとDateだけでもOK   
@@ -77,22 +85,25 @@ Author: 著者
 
 ### 記事をジェネレイト
 
-`pelican content`でcontent内に作った記事をoutputディレクトリにジェネレイト。 
+pelicanconf.pyがあるディレクトリで`pelican`コマンドでcontent内に作った記事をoutputディレクトリにジェネレイト。 
 outputディレクトリにhtmlファイルが生成されます。  <br><br>
 
-### ローカルで確認
+## ローカルで確認
+---
 
 outputディレクトリに移動`cd output`して、`python -m pelican.server`でローカルサーバーを立ち上げる。  
-
+追記：現在のバージョンでは`python -m http.server`と打つのが正しい。  
 ブラウザで`localhost:8000`にアクセスすると、作成された記事が出力されます。<br><br>
 
-### staticファイル
+## staticファイル
+---
 
 staticファイルはcontentディレクトリ内にstaticディレクトリとかimagesディレクトリを作ってそこに入れる。  
 pelicanconf.pyに`STATIC_PATHS = ['images']`のように記述。  
 ディレクトリが複数の場合はコンマ区切りで記述  <br><br>
 
-### テーマを導入
+## テーマを導入
+---
 
 デフォルトのテーマを変えたい場合、自作するか、[Pelican Themes](http://pelicanthemes.com/){:target="_blank"}からお気に入りのものをダウンロードして適用することも出来ます。
 themesディレクトリを作ってそこにダウンロードしたテーマを入れたら、`pelican-themes --i [テーマの入ったディレクトリ]`で導入することが出来ます。  
@@ -100,7 +111,8 @@ themesディレクトリを作ってそこにダウンロードしたテーマ�
 ちゃんと入ったかを確認するには`pelican-themes -l`  
 入ってたら`pelicanconf.py`にTHEME = 'テーマ名'を追加する。<br><br>
 
-### GitHub PagesにPush
+## GitHub PagesにPush
+---
 
 pipでghp-importを入れておくと、GitHub pagesへの公開が楽に行える。  
 入れたらGitHubにアップロード  
@@ -112,7 +124,7 @@ pipでghp-importを入れておくと、GitHub pagesへの公開が楽に行え�
 <br><br>
 実際に作ったのが[こちら](https://squigly77.github.io/)。テーマはFlexを使用。
 
-### 参考サイト
+## 参考サイト
 [Pelican](http://docs.getpelican.com/en/stable/){:target="_blank"}  
 [Pythonの静的サイトジェネレータ"Pelican"でお手軽にブログをはじめる手順](https://qiita.com/ogrew/items/ecef0a4700d5bd4d875d){:target="_blank"}  
 [PELICAN + GITHUB PAGES でブログを作った話](http://daikishimada.github.io/pelican-start.html){:target="_blank"}
