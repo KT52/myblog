@@ -1,6 +1,6 @@
 ---
 title: CentOS7でApacheからNginxに移行するときにした事
-date: 2019-07-17
+date: 2019-08-05
 category: Misc
 tags: nginx,vps
 slug: fromapachetonginx
