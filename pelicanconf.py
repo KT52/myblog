@@ -86,7 +86,7 @@ DISPLAY_PAGES_ON_MENU = False
 DEFAULT_PAGINATION = 10
 MENUITEMS = (('Home', SITEURL), ('Tags', '/tags.html'), ('Category', '/categories.html'))
 
-GOOGLE_ANALYTICS = "UA-67464867-3"
+GOOGLE_ANALYTICS = ""
 
 #LOAD_CONTENT_CACHE = False
 
